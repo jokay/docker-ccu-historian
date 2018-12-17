@@ -48,15 +48,18 @@ docker pull xjokay/ccu-historian
 
 These Enviorment varibables must be set for the first start:
 
-| ENV field              | Values           | Description                          |
-|------------------------|------------------|--------------------------------------|
-| CONFIG_CCU_TYPE        | CCU1, CCU2, CCU3 | Type of the CCU hardware             |
-| CONFIG_CCU_IP          |                  | IP of the CCU                        |
-| CONFIG_HOST_IP         |                  | IP of the Docker host                |
-| CONFIG_HOST_XMLRPCPORT | 2098             | _Optional:_ XML port of the RPC-port |
-| CONFIG_HOST_BINRPCPORT | 2099             | _Optional:_ Bin port of the RPC-port |
+| ENV field               | Values           | Description                          |
+|-------------------------|------------------|--------------------------------------|
+| CONFIG_CCU_TYPE         | CCU1, CCU2, CCU3 | Type of the CCU hardware             |
+| CONFIG_CCU_IP           |                  | IP of the CCU                        |
+| CONFIG_HOST_IP          |                  | IP of the Docker host                |
+| CONFIG_HOST_XMLRPCPORT  | 2098             | _Optional:_ XML port of the RPC-port |
+| CONFIG_HOST_BINRPCPORT  | 2099             | _Optional:_ Bin port of the RPC-port |
+| CONFIG_CCU_PLUGIN1_TYPE | CUXD, HMWLGW     | _Optional:_ Additional plugins       |
+| CONFIG_CCU_PLUGIN2_TYPE | CUXD, HMWLGW     | _Optional:_ Additional plugins       |
 
-Additional config settings (e.g. CUxD) should be made by changing the config file ccu-historian.config within the docker container.
+Additional config settings should be made by changing the config file ccu-historian.config
+within the docker container.
 
 It is easier to export the config folder out of the docker container and edit the file there.
 
