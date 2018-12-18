@@ -63,7 +63,9 @@ within the docker container.
 
 It is easier to export the config folder out of the docker container and edit the file there.
 
-### Sample docker-compose
+### Samples
+
+#### docker-compose
 
 ```sh
 version: '3.6'
@@ -87,4 +89,10 @@ services:
       - CONFIG_HOST_IP=192.168.1.100
     networks:
       - default
+```
+
+#### docker run
+
+```sh
+sudo docker run -d --name ccu-historian -p 80:80 -p 2098:2098 -p 2099:2099 -e CONFIG_CCU_TYPE=CCU2 -e CONFIG_CCU_IP=192.168.1.10 -e CONFIG_HOST_IP=192.168.1.100 xjokay/ccu-historian:latest
 ```
