@@ -1,4 +1,4 @@
-FROM openjdk:8-jre-alpine
+FROM openjdk:8-jre
 MAINTAINER D. Domig <x@jokay.ch>
 
 ADD ./run.sh /tmp/
@@ -10,7 +10,7 @@ ENV APP_CKS=c530cf3459a9539f4e8f6329f991aa5c619045e91017487c2216ef6a25c754e846c5
 ENV CONFIG_TYPE=CCU2
 ENV TZ=UTC
 
-RUN apk add --no-cache curl && \
+RUN apt-get install curl && \
 mkdir -p /opt/ccu-historian /database && \
 curl -SL ${APP} --output ccu-historian.zip && \
 echo "${APP_CKS}  ccu-historian.zip" | sha512sum -c - && \

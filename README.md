@@ -1,6 +1,6 @@
 # Docker container for CCU-Historian
 
-Minimal Docker container for [CCU-Historian](https://ccu-historian.de/) on [Alpine Linux](https://alpinelinux.org).
+Minimal Docker container for [CCU-Historian](https://ccu-historian.de/).
 
 ## General
 
