@@ -25,4 +25,4 @@ EXPOSE 80 2098 2099
 
 VOLUME ["/database","/opt/ccu-historian/config"]
 
-ENTRYPOINT ["sh","/opt/ccu-historian/run.sh"]
+ENTRYPOINT ["bash","/opt/ccu-historian/run.sh"]
