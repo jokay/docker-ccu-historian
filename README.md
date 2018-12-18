@@ -94,5 +94,15 @@ services:
 #### docker run
 
 ```sh
-sudo docker run -d --name ccu-historian -p 80:80 -p 2098:2098 -p 2099:2099 -e CONFIG_CCU_TYPE=CCU2 -e CONFIG_CCU_IP=192.168.1.10 -e CONFIG_HOST_IP=192.168.1.100 xjokay/ccu-historian:latest
+sudo docker run -d \
+--name ccu-historian \
+-v $PWD/database:/database \
+-v $PWD/config:/opt/ccu-historian/config \
+-p 80:80 \
+-p 2098:2098 \
+-p 2099:2099 \
+-e CONFIG_CCU_TYPE=CCU2 \
+-e CONFIG_CCU_IP=192.168.1.10  \
+-e CONFIG_HOST_IP=192.168.1.100 \
+xjokay/ccu-historian:latest
 ```
