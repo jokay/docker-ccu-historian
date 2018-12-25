@@ -1,5 +1,5 @@
 FROM openjdk:11-jre
-MAINTAINER D. Domig <x@jokay.ch>
+MAINTAINER D. Domig <x AT jokay DOT ch>
 
 ADD ./run.sh /tmp/
 
