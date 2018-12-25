@@ -1,8 +1,8 @@
 The MIT License (MIT)
 
-Copyright (c) 2015 Thomas Zahari <thomas.zahari@gmail.com>
+Copyright (c) 2015 Thomas Zahari <thomas.zahari AT gmail DOT com>
 
-Copyright (c) 2018 D. Domig <x@jokay.ch>
+Copyright (c) 2018 D. Domig <x AT jokay DOT ch>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
