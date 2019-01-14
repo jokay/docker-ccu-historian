@@ -5,8 +5,8 @@ ADD ./run.sh /tmp/
 
 WORKDIR /tmp
 
-ENV APP=https://github.com/mdzio/ccu-historian/releases/download/1.2.0/ccu-historian-1.2.0-bin.zip
-ENV APP_CKS=c530cf3459a9539f4e8f6329f991aa5c619045e91017487c2216ef6a25c754e846c5abf14f8575f52ae74254c00a4fe741a23865de32d404dc0e816680351a8c
+ENV APP=https://github.com/mdzio/ccu-historian/releases/download/2.0.0/ccu-historian-2.0.0-bin.zip
+ENV APP_CKS=1d24406d2ffb9d47b2f460638ee7185eab9d060340866e1bc8f3371ae0d2ce8eecf9f5edbcc3cac5688c021d8213206ccd3805b4fad289d35a5ee9be525ad908
 ENV CONFIG_TYPE=CCU2
 ENV TZ=UTC
 
