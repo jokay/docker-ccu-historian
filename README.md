@@ -4,21 +4,12 @@ Minimal Docker container for [CCU-Historian](https://ccu-historian.de/).
 
 ## General
 
-### Changelog
-
-See [CHANGELOG.md](CHANGELOG.md).
-
-### License
-
-See [LICENSE.md](LICENSE.md).
-
-### Source
-
-See [GitHub](https://github.com/x-jokay/docker-ccu-historian).
-
-### Container
-
-See [Docker Hub](https://hub.docker.com/r/xjokay/ccu-historian).
+| Topic     | Description                                                      |
+|-----------|------------------------------------------------------------------|
+| Changelog | See [CHANGELOG.md](CHANGELOG.md).                                |
+| License   | See [LICENSE.md](LICENSE.md).                                    |
+| Source    | See [GitHub](https://github.com/x-jokay/docker-ccu-historian).   |
+| Container | See [Docker Hub](https://hub.docker.com/r/xjokay/ccu-historian). |
 
 ## Installation
 
