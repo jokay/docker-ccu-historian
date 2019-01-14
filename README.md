@@ -4,6 +4,10 @@ Minimal Docker container for [CCU-Historian](https://ccu-historian.de/).
 
 ## General
 
+### Changelog
+
+See [CHANGELOG.md](CHANGELOG.md).
+
 ### License
 
 See [LICENSE.md](LICENSE.md).
