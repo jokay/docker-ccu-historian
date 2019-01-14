@@ -62,7 +62,7 @@ It is easier to export the config folder out of the docker container and edit th
 
 #### docker-compose
 
-```sh
+```yaml
 version: '3.6'
 
 services:
