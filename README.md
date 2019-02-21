@@ -21,7 +21,7 @@ docker pull xjokay/ccu-historian
 
 | Tag    | Description                                                                                       |
 |--------|---------------------------------------------------------------------------------------------------|
-| latest | Latest stable (currently [2.0.0](https://github.com/mdzio/ccu-historian/releases/tag/2.0.0))      |
+| latest | Latest stable (currently [2.1.0](https://github.com/mdzio/ccu-historian/releases/tag/2.1.0))      |
 | beta   | Beta (currently [2.0.0-beta.5](https://github.com/mdzio/ccu-historian/releases/tag/2.0.0-beta.5)) |
 
 ### Exposed Ports
@@ -63,12 +63,11 @@ It is easier to export the config folder out of the docker container and edit th
 #### docker-compose
 
 ```yaml
-version: '3.6'
+version: '3.7'
 
 services:
   ccu-historian:
     image: xjokay/ccu-historian:latest
-    container_name: ccu-historian
     volumes:
       - ./database:/database
       - ./config:/opt/ccu-historian/config
@@ -76,7 +75,6 @@ services:
       - '80:80'
       - '2098:2098'
       - '2099:2099'
-    restart: on-failure
     environment:
       - TZ=Europe/Zurich
       - CONFIG_CCU_TYPE=CCU2
