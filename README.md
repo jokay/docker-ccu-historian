@@ -66,15 +66,15 @@ It is easier to export the config folder out of the docker container and edit th
 version: '3.7'
 
 services:
-  ccu-historian:
+  app:
     image: xjokay/ccu-historian:latest
     volumes:
       - ./database:/database
       - ./config:/opt/ccu-historian/config
     ports:
-      - '80:80'
-      - '2098:2098'
-      - '2099:2099'
+      - 80:80
+      - 2098:2098
+      - 2099:2099
     environment:
       - TZ=Europe/Zurich
       - CONFIG_CCU_TYPE=CCU2
