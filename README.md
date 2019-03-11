@@ -41,7 +41,7 @@ docker pull xjokay/ccu-historian
 
 ### Configuration
 
-These Enviorment varibables must be set for the first start:
+These environment variables must be set for the first start:
 
 | ENV field               | Values           | Description                          |
 |-------------------------|------------------|--------------------------------------|
