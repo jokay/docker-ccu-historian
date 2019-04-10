@@ -1,6 +1,6 @@
 # Docker container for CCU-Historian
 
-Minimal Docker container for [CCU-Historian](https://ccu-historian.de/).
+Docker container for [CCU-Historian](https://ccu-historian.de/).
 
 ## General
 
@@ -22,7 +22,7 @@ docker pull xjokay/ccu-historian
 | Tag    | Description                                                                                       |
 |--------|---------------------------------------------------------------------------------------------------|
 | latest | Latest stable (currently [2.1.0](https://github.com/mdzio/ccu-historian/releases/tag/2.1.0))      |
-| beta   | Beta (currently [2.2.0-beta.2](https://github.com/mdzio/ccu-historian/releases/tag/2.2.0-beta.2)) |
+| beta   | Beta (currently [2.2.0-beta.3](https://github.com/mdzio/ccu-historian/releases/tag/2.2.0-beta.3)) |
 
 ### Exposed Ports
 

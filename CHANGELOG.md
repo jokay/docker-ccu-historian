@@ -1,5 +1,9 @@
 # Changelog
 
+## 2019-04-10
+
+* Updated `beta` to `2.2.0-beta.3`.
+
 ## 2019-03-13
 
 * Updated `beta` to `2.2.0-beta.2`.
