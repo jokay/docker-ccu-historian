@@ -1,6 +1,6 @@
-# Docker container for CCU-Historian
+# Docker image for CCU-Historian
 
-Docker container for [CCU-Historian](https://ccu-historian.de/).
+Docker image for [CCU-Historian](https://ccu-historian.de/).
 
 ## General
 
@@ -9,7 +9,7 @@ Docker container for [CCU-Historian](https://ccu-historian.de/).
 | Changelog | See [CHANGELOG.md](https://github.com/x-jokay/docker-ccu-historian/blob/master/CHANGELOG.md). |
 | License   | See [LICENSE.md](https://github.com/x-jokay/docker-ccu-historian/blob/master/LICENSE.md).     |
 | Source    | See [GitHub](https://github.com/x-jokay/docker-ccu-historian).                                |
-| Container | See [Docker Hub](https://hub.docker.com/r/xjokay/ccu-historian).                              |
+| Image     | See [Docker Hub](https://hub.docker.com/r/xjokay/ccu-historian).                              |
 
 ## Installation
 
