@@ -1,5 +1,10 @@
 # Changelog
 
+## 2019-04-15
+
+* Added `2.1.0`.
+* Removed `beta`.
+
 ## 2019-04-12
 
 * Updated `beta` to `2.2.0-beta.4`.

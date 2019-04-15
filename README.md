@@ -19,10 +19,10 @@ docker pull xjokay/ccu-historian
 
 ### Supported tags
 
-| Tag    | Description                                                                                       |
-|--------|---------------------------------------------------------------------------------------------------|
-| latest | Latest stable (currently [2.1.0](https://github.com/mdzio/ccu-historian/releases/tag/2.1.0))      |
-| beta   | Beta (currently [2.2.0-beta.4](https://github.com/mdzio/ccu-historian/releases/tag/2.2.0-beta.4)) |
+| Tag    | Description                                                                                  |
+|--------|----------------------------------------------------------------------------------------------|
+| latest | Latest stable (currently [2.1.0](https://github.com/mdzio/ccu-historian/releases/tag/2.1.0)) |
+| 2.1.0  | Release [2.1.0](https://github.com/mdzio/ccu-historian/releases/tag/2.1.0)                   |
 
 ### Exposed Ports
 

@@ -1,4 +1,4 @@
-#! /bin/sh 
+#! /bin/sh
 ###
 # Run script for ccu-historian.
 ###
@@ -17,7 +17,7 @@ then
         echo "Config option(s) are missing! Please specify CONFIG_CCU_TYPE, CONFIG_CCU_IP and CONFIG_HOST_IP."
         exit -1
     fi
-    
+
     echo "Creating config file ..."
 
     echo "devices.device1.type=$CONFIG_CCU_TYPE" > $CONFIG
