@@ -2,14 +2,21 @@
 
 Docker image for [CCU-Historian](https://ccu-historian.de/).
 
+## Information
+
+| Service       | Stats                                                                                     |
+|---------------|-------------------------------------------------------------------------------------------|
+| Docker        | [![Build](https://img.shields.io/docker/cloud/build/xjokay/ccu-historian.svg?style=flat-square)](https://hub.docker.com/r/xjokay/ccu-historian/builds) [![Pulls](https://img.shields.io/docker/pulls/xjokay/ccu-historian.svg?style=flat-square)](https://hub.docker.com/r/xjokay/ccu-historian) [![Stars](https://img.shields.io/docker/stars/xjokay/ccu-historian.svg?style=flat-square)](https://hub.docker.com/r/xjokay/ccu-historian) [![Automated](https://img.shields.io/docker/cloud/automated/xjokay/ccu-historian.svg?style=flat-square)](https://hub.docker.com/r/xjokay/ccu-historian/builds) |
+| GitHub        | [![Last commit](https://img.shields.io/github/last-commit/x-jokay/docker-ccu-historian.svg?style=flat-square)](https://github.com/x-jokay/docker-ccu-historian/commits/master) [![Issues](https://img.shields.io/github/issues-raw/x-jokay/docker-ccu-historian.svg?style=flat-square)](https://github.com/x-jokay/docker-ccu-historian/issues) [![PR](https://img.shields.io/github/issues-pr-raw/x-jokay/docker-ccu-historian.svg?style=flat-square)](https://github.com/x-jokay/docker-ccu-historian/pulls) [![Size](https://img.shields.io/github/repo-size/x-jokay/docker-ccu-historian.svg?style=flat-square)](https://github.com/x-jokay/docker-ccu-historian/) [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/x-jokay/docker-ccu-historian/blob/master/LICENSE.md) |
+| CCU-Historian | [![Release](https://img.shields.io/github/release/mdzio/ccu-historian.svg?style=flat-square)](https://github.com/mdzio/ccu-historian/releases/latest) |
+
 ## General
 
 | Topic     | Description                                                                                   |
 |-----------|-----------------------------------------------------------------------------------------------|
-| Changelog | See [CHANGELOG.md](https://github.com/x-jokay/docker-ccu-historian/blob/master/CHANGELOG.md). |
-| License   | See [LICENSE.md](https://github.com/x-jokay/docker-ccu-historian/blob/master/LICENSE.md).     |
-| Source    | See [GitHub](https://github.com/x-jokay/docker-ccu-historian).                                |
 | Image     | See [Docker Hub](https://hub.docker.com/r/xjokay/ccu-historian).                              |
+| Source    | See [GitHub](https://github.com/x-jokay/docker-ccu-historian).                                |
+| Changelog | See [CHANGELOG.md](https://github.com/x-jokay/docker-ccu-historian/blob/master/CHANGELOG.md). |
 
 ## Installation
 
@@ -19,10 +26,10 @@ docker pull xjokay/ccu-historian
 
 ### Supported tags
 
-| Tag    | Description                                                                                  |
-|--------|----------------------------------------------------------------------------------------------|
-| latest | Latest stable (currently [2.1.0](https://github.com/mdzio/ccu-historian/releases/tag/2.1.0)) |
-| 2.1.0  | Release [2.1.0](https://github.com/mdzio/ccu-historian/releases/tag/2.1.0)                   |
+| Tag    | Description                                                                                  | Size                                                                                                                                                                  |
+|--------|----------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| latest | Latest stable (currently [2.1.0](https://github.com/mdzio/ccu-historian/releases/tag/2.1.0)) | [![Size](https://shields.beevelop.com/docker/image/image-size/xjokay/ccu-historian/latest.svg?style=flat-square)](https://hub.docker.com/r/xjokay/ccu-historian/tags) |
+| 2.1.0  | Release [2.1.0](https://github.com/mdzio/ccu-historian/releases/tag/2.1.0)                   | [![Size](https://shields.beevelop.com/docker/image/image-size/xjokay/ccu-historian/2.1.0.svg?style=flat-square)](https://hub.docker.com/r/xjokay/ccu-historian/tags)  |
 
 ### Exposed Ports
 
@@ -58,9 +65,9 @@ within the docker container.
 
 It is easier to export the config folder out of the docker container and edit the file there.
 
-### Samples
+## Samples
 
-#### docker-compose
+### docker-compose
 
 ```yaml
 version: '3.7'
@@ -84,18 +91,19 @@ services:
       - default
 ```
 
-#### docker run
+### docker run
 
 ```sh
-sudo docker run -d \
---name ccu-historian \
--v $PWD/database:/database \
--v $PWD/config:/opt/ccu-historian/config \
--p 80:80 \
--p 2098:2098 \
--p 2099:2099 \
--e CONFIG_CCU_TYPE=CCU2 \
--e CONFIG_CCU_IP=192.168.1.10  \
--e CONFIG_HOST_IP=192.168.1.100 \
-xjokay/ccu-historian:latest
+docker run -d \
+  --name ccu-historian \
+  -v $PWD/database:/database \
+  -v $PWD/config:/opt/ccu-historian/config \
+  -p 80:80 \
+  -p 2098:2098 \
+  -p 2099:2099 \
+  -e TZ=Europe/Zurich \
+  -e CONFIG_CCU_TYPE=CCU2 \
+  -e CONFIG_CCU_IP=192.168.1.10  \
+  -e CONFIG_HOST_IP=192.168.1.100 \
+  xjokay/ccu-historian:latest
 ```
