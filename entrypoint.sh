@@ -1,7 +1,4 @@
 #! /bin/sh
-###
-# Run script for ccu-historian.
-###
 
 FOLDER=/opt/ccu-historian
 CONFIG=$FOLDER/config/ccu-historian.config
