@@ -14,14 +14,14 @@ RUN echo "${CHECKSUM}  ccu-historian-${VERSION}-bin.zip" | sha512sum -c - && \
 
 
 
-FROM openjdk:8-jre
+FROM openjdk:8-jre-alpine
 
 ENV CONFIG_TYPE CCU2
 ENV TZ UTC 
 
-RUN mkdir -p /opt/ccu-historian /database && \
-    ln -nsf /usr/share/zoneinfo/$TZ /etc/localtime && \
-    echo $TZ > /etc/timezone
+RUN mkdir -p /opt/ccu-historian /database 
+RUN apk add --no-cache tzdata
+
 
 COPY --from=download /tmp/ccu-historian /opt/ccu-historian
 
@@ -31,4 +31,4 @@ EXPOSE 80 2098 2099
 
 VOLUME ["/database","/opt/ccu-historian/config"]
 
-ENTRYPOINT ["bash","/entrypoint.sh"]
+ENTRYPOINT ["sh","/entrypoint.sh"]
