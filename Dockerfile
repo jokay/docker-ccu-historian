@@ -19,8 +19,8 @@ FROM openjdk:8-jre-alpine
 ENV CONFIG_TYPE CCU2
 ENV TZ UTC 
 
-RUN mkdir -p /opt/ccu-historian /database 
-RUN apk add --no-cache tzdata
+RUN mkdir -p /opt/ccu-historian /database && \
+    apk add --no-cache tzdata
 
 
 COPY --from=download /tmp/ccu-historian /opt/ccu-historian
