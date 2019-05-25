@@ -27,3 +27,6 @@ COPY docker-entrypoint.sh /usr/local/bin/
 ENTRYPOINT ["docker-entrypoint.sh"]
 
 EXPOSE 80 2098 2099
+
+HEALTHCHECK --interval=1m --timeout=3s \
+    CMD curl -f http://localhost/historian || exit 1
