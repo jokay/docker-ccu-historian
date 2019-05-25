@@ -24,7 +24,6 @@ COPY --from=0 /tmp/ccu-historian /opt/ccu-historian
 VOLUME ["/database","/opt/ccu-historian/config"]
 
 COPY docker-entrypoint.sh /usr/local/bin/
-RUN ln -s usr/local/bin/docker-entrypoint.sh / # backwards compat
 ENTRYPOINT ["docker-entrypoint.sh"]
 
 EXPOSE 80 2098 2099
