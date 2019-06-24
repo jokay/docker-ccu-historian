@@ -13,15 +13,16 @@ RUN echo "${CHECKSUM}  ccu-historian-${VERSION}-bin.zip" | sha512sum -c - && \
 
 FROM openjdk:8-jre
 
-ENV CONFIG_TYPE CCU2
 ENV TZ UTC
 
-RUN mkdir -p /opt/ccu-historian /database && \
+WORKDIR /opt/ccu-historian
+
+RUN mkdir -p /database && \
     echo $TZ > /etc/timezone
 
 COPY --from=0 /tmp/ccu-historian /opt/ccu-historian
 
-VOLUME ["/database","/opt/ccu-historian/config"]
+VOLUME ["/opt/ccu-historian/config", "/database"]
 
 COPY docker-entrypoint.sh /usr/local/bin/
 ENTRYPOINT ["docker-entrypoint.sh"]
