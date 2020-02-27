@@ -57,6 +57,8 @@ if [[ ! -f "${FILE_CONFIG}" ]]; then
     if [ -n "${CONFIG_CCU_PLUGIN2_TYPE}" ]; then
         add_cfg "devices.device1.plugin2.type=${CONFIG_CCU_PLUGIN2_TYPE}"
     fi
+
+    add_cfg "database.webAllowOthers=true"
 fi
 
 log "Starting CCU-Historian with the following config:"
