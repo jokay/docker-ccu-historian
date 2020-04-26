@@ -16,7 +16,7 @@ add_cfg () {
     echo "${1}" >> ${FILE_CONFIG}
 }
 
-log "xjokay/ccu-historian"
+log "xjokay/ccu-historian ${VERSION}"
 
 if [[ ! -d "${PATH_CONFIG}" ]]; then
     log "Creating config directory ..."
@@ -35,20 +35,10 @@ if [[ ! -f "${FILE_CONFIG}" ]]; then
     touch "${FILE_CONFIG}"
 
     add_cfg "database.dir='/database'"
-    add_cfg "webServer.historianAddress='${CONFIG_HOST_IP}'"
+    add_cfg "database.webAllowOthers=true"
 
-    if [ -n "${CONFIG_HOST_BINRPCPORT}" ]; then
-        add_cfg "devices.historianBinRpcPort=${CONFIG_HOST_BINRPCPORT}"
-    fi
-
-    if [ -n "${CONFIG_HOST_XMLRPCPORT}" ]; then
-        add_cfg "devices.historianXmlRpcPort=${CONFIG_HOST_XMLRPCPORT}"
-    fi
-
-    add_cfg "devices.historianAddress='${CONFIG_HOST_IP}'"
-
-    add_cfg "devices.device1.type=${CONFIG_CCU_TYPE}"
     add_cfg "devices.device1.address='${CONFIG_CCU_IP}'"
+    add_cfg "devices.device1.type=${CONFIG_CCU_TYPE}"
 
     if [ -n "${CONFIG_CCU_PLUGIN1_TYPE}" ]; then
         add_cfg "devices.device1.plugin1.type=${CONFIG_CCU_PLUGIN1_TYPE}"
@@ -58,10 +48,28 @@ if [[ ! -f "${FILE_CONFIG}" ]]; then
         add_cfg "devices.device1.plugin2.type=${CONFIG_CCU_PLUGIN2_TYPE}"
     fi
 
-    add_cfg "database.webAllowOthers=true"
+    if [ -n "${CONFIG_CCU_USERNAME}" ]; then
+        add_cfg "devices.device1.username='${CONFIG_CCU_USERNAME}'"
+    fi
+
+    if [ -n "${CONFIG_CCU_PASSWORD}" ]; then
+        add_cfg "devices.device1.password='${CONFIG_CCU_PASSWORD}'"
+    fi
+
+    add_cfg "devices.historianAddress='${CONFIG_HOST_IP}'"
+
+    if [ -n "${CONFIG_HOST_BINRPCPORT}" ]; then
+        add_cfg "devices.historianBinRpcPort=${CONFIG_HOST_BINRPCPORT}"
+    fi
+
+    if [ -n "${CONFIG_HOST_XMLRPCPORT}" ]; then
+        add_cfg "devices.historianXmlRpcPort=${CONFIG_HOST_XMLRPCPORT}"
+    fi
+
+    add_cfg "webServer.historianAddress='${CONFIG_HOST_IP}'"
 fi
 
-log "Starting CCU-Historian with the following config:"
+log "Starting CCU-Historian using the following config:"
 log_sub "---"
 while IFS="" read -r cfg || [ -n "$cfg" ]
 do

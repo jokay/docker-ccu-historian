@@ -1,7 +1,10 @@
+ARG VERSION=2.4.0
+ARG CHECKSUM=dc6b180ea20a993d6729f426125db5aed2b5fdb171d6d5e880ee87b2e7ce73ced5b917240adc0b35026ef1ca53d808b5d38b24536b3ee4f81d77e4b9017b3f14
+
 FROM alpine:latest
 
-ARG VERSION=2.3.0
-ARG CHECKSUM=e71cdb81dab9bd16e0773ab5eee0e362bcd981836dfd87a87a89321017bd96898531100259a5d0b70788f64cb5295456ce155a2a245c8b5d711add97c817e902
+ARG VERSION
+ARG CHECKSUM
 
 WORKDIR /tmp
 
@@ -13,12 +16,16 @@ RUN echo "${CHECKSUM}  ccu-historian-${VERSION}-bin.zip" | sha512sum -c - && \
 
 FROM openjdk:8-jre
 
+ARG VERSION
+
+ENV VERSION ${VERSION}
+
 ENV TZ UTC
 
 WORKDIR /opt/ccu-historian
 
 RUN mkdir -p /database && \
-    echo $TZ > /etc/timezone
+    echo ${TZ} > /etc/timezone
 
 COPY --from=0 /tmp/ccu-historian /opt/ccu-historian
 
