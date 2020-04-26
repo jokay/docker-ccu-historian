@@ -38,7 +38,7 @@ docker pull xjokay/ccu-historian
 
 | Port | Protocol | Description |
 |------|----------|-------------|
-|   80 | TCP      | Web-GUI     |
+| 8080 | TCP      | Web-GUI     |
 | 2098 | TCP      | XmlRpcPort  |
 | 2099 | TCP      | BinRpcPort  |
 
@@ -55,6 +55,9 @@ These environment variables must be set for the first start:
 
 | ENV field               | Values           | Description                          |
 |-------------------------|------------------|--------------------------------------|
+| TZ                      | UTC              | Timezone to use                      |
+| GID                     | 999              | Group-ID of user                     |
+| UID                     | 999              | User-ID of user                      |
 | CONFIG_CCU_TYPE         | CCU1, CCU2, CCU3 | Type of the CCU hardware             |
 | CONFIG_CCU_IP           |                  | IP of the CCU                        |
 | CONFIG_HOST_IP          |                  | IP of the Docker host                |
@@ -82,7 +85,7 @@ services:
       - ./database:/database
       - ./config:/opt/ccu-historian/config
     ports:
-      - 80:80
+      - 80:8080
       - 2098:2098
       - 2099:2099
     environment:
@@ -100,7 +103,7 @@ services:
 docker run -d \
   -v $PWD/database:/database \
   -v $PWD/config:/opt/ccu-historian/config \
-  -p 80:80 \
+  -p 80:8080 \
   -p 2098:2098 \
   -p 2099:2099 \
   -e TZ=Europe/Zurich \

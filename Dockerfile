@@ -14,20 +14,25 @@ RUN echo "${CHECKSUM}  ccu-historian-${VERSION}-bin.zip" | sha512sum -c - && \
 FROM openjdk:8-jre
 
 ENV TZ UTC
+ENV GID 999
+ENV UID 999
 
 WORKDIR /opt/ccu-historian
 
-RUN mkdir -p /database && \
-    echo $TZ > /etc/timezone
+RUN groupadd -g ${GID} ccuhistorian && \
+    useradd -m -r -u ${UID} -g ccuhistorian ccuhistorian && \
+    echo ${TZ} > /etc/timezone
 
-COPY --from=0 /tmp/ccu-historian /opt/ccu-historian
+COPY --chown=ccuhistorian:ccuhistorian --from=0 /tmp/ccu-historian /opt/ccu-historian
+
+COPY --chown=ccuhistorian:ccuhistorian docker-entrypoint.sh /usr/local/bin/
+ENTRYPOINT ["docker-entrypoint.sh"]
 
 VOLUME ["/opt/ccu-historian/config", "/database"]
 
-COPY docker-entrypoint.sh /usr/local/bin/
-ENTRYPOINT ["docker-entrypoint.sh"]
-
-EXPOSE 80 2098 2099
+EXPOSE 8080 2098 2099
 
 HEALTHCHECK --interval=1m --timeout=3s \
-    CMD curl -f http://localhost/historian || exit 1
+    CMD curl -f http://localhost:8080/historian || exit 1
+
+USER ccuhistorian

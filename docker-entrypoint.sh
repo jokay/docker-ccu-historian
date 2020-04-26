@@ -59,6 +59,7 @@ if [[ ! -f "${FILE_CONFIG}" ]]; then
     fi
 
     add_cfg "database.webAllowOthers=true"
+    add_cfg "webServer.port=8080"
 fi
 
 log "Starting CCU-Historian with the following config:"
