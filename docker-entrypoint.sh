@@ -69,6 +69,19 @@ if [[ ! -f "${FILE_CONFIG}" ]]; then
     add_cfg "webServer.historianAddress='${CONFIG_HOST_IP}'"
 fi
 
+if [ -n "${CONFIG_KEEP_MONTHS}" ]; then
+    REF_DATE=$(date -d "-${CONFIG_KEEP_MONTHS} month" +%Y-%m-%d)
+
+    log "Running database maintenance 'clean' (removes all data before ${REF_DATE}) ..."
+    java -jar ${PATH_BASE}/ccu-historian.jar -config ${FILE_CONFIG} -clean ${REF_DATE}
+
+    log "Running database maintenance 'recalc' ..."
+    java -jar ${PATH_BASE}/ccu-historian.jar -config ${FILE_CONFIG} -recalc
+
+    log "Running database maintenance 'compact' ..."
+    java -jar ${PATH_BASE}/ccu-historian.jar -config ${FILE_CONFIG} -compact
+fi
+
 log "Starting CCU-Historian using the following config:"
 log_sub "---"
 while IFS="" read -r cfg || [ -n "$cfg" ]
