@@ -54,17 +54,18 @@ docker pull xjokay/ccu-historian
 
 These environment variables must be set for the first start:
 
-| ENV field               | Values           | Description                             |
-|-------------------------|------------------|-----------------------------------------|
-| CONFIG_CCU_TYPE         | CCU1, CCU2, CCU3 | Type of the CCU hardware                |
-| CONFIG_CCU_IP           |                  | IP of the CCU                           |
-| CONFIG_HOST_IP          |                  | IP of the Docker host                   |
-| CONFIG_HOST_XMLRPCPORT  | 2098             | _Optional:_ XML port of the RPC-port    |
-| CONFIG_HOST_BINRPCPORT  | 2099             | _Optional:_ Bin port of the RPC-port    |
-| CONFIG_CCU_PLUGIN1_TYPE | CUXD, HMWLGW     | _Optional:_ Additional plugins          |
-| CONFIG_CCU_PLUGIN2_TYPE | CUXD, HMWLGW     | _Optional:_ Additional plugins          |
-| CONFIG_CCU_USERNAME     |                  | _Optional:_ Username for authentication |
-| CONFIG_CCU_PASSWORD     |                  | _Optional:_ Password for authentication |
+| ENV field               | Values           | Description                                       |
+|-------------------------|------------------|---------------------------------------------------|
+| CONFIG_CCU_TYPE         | CCU1, CCU2, CCU3 | Type of the CCU hardware                          |
+| CONFIG_CCU_IP           |                  | IP of the CCU                                     |
+| CONFIG_HOST_IP          |                  | IP of the Docker host                             |
+| CONFIG_HOST_XMLRPCPORT  | 2098             | _Optional:_ XML port of the RPC-port              |
+| CONFIG_HOST_BINRPCPORT  | 2099             | _Optional:_ Bin port of the RPC-port              |
+| CONFIG_CCU_PLUGIN1_TYPE | CUXD, HMWLGW     | _Optional:_ Additional plugins                    |
+| CONFIG_CCU_PLUGIN2_TYPE | CUXD, HMWLGW     | _Optional:_ Additional plugins                    |
+| CONFIG_CCU_USERNAME     |                  | _Optional:_ Username for authentication           |
+| CONFIG_CCU_PASSWORD     |                  | _Optional:_ Password for authentication           |
+| CONFIG_KEEP_MONTHS      |                  | _Optional:_ Cleanup of values older than x months |
 
 Additional config settings should be made by changing the config file `ccu-historian.config`
 within the docker container.
@@ -93,6 +94,10 @@ services:
       - CONFIG_CCU_TYPE=CCU3
       - CONFIG_CCU_IP=192.168.1.10
       - CONFIG_HOST_IP=192.168.1.100
+      - CONFIG_HOST_BINRPCPORT=2099
+      - CONFIG_HOST_XMLRPCPORT=2098
+      - CONFIG_CCU_PLUGIN1_TYPE=CUXD
+      - CONFIG_KEEP_MONTHS=12
     networks:
       - default
 ```
@@ -110,5 +115,9 @@ docker run -d \
   -e CONFIG_CCU_TYPE=CCU3 \
   -e CONFIG_CCU_IP=192.168.1.10  \
   -e CONFIG_HOST_IP=192.168.1.100 \
+  -e CONFIG_HOST_BINRPCPORT=2099 \
+  -e CONFIG_HOST_XMLRPCPORT=2098 \
+  -e CONFIG_CCU_PLUGIN1_TYPE=CUXD \
+  -e CONFIG_KEEP_MONTHS=12 \
   xjokay/ccu-historian:latest
 ```
