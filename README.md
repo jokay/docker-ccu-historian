@@ -36,11 +36,14 @@ docker pull xjokay/ccu-historian
 
 ### Exposed Ports
 
-| Port | Protocol | Description |
-|------|----------|-------------|
-|   80 | TCP      | Web-GUI     |
-| 2098 | TCP      | XmlRpcPort  |
-| 2099 | TCP      | BinRpcPort  |
+| Port | Protocol | Description              |
+|------|----------|--------------------------|
+|   80 | TCP      | Web-GUI Port             |
+| 2098 | TCP      | Xml RPC Port             |
+| 2099 | TCP      | Bin RPC Port             |
+| 8082 | TCP      | Database Web-GUI Port    |
+| 9092 | TCP      | Database TCP Port        |
+| 5435 | TCP      | Database PostgreSQL Port |
 
 ### Volumes
 

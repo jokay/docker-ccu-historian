@@ -34,7 +34,7 @@ VOLUME ["/opt/ccu-historian/config", "/database"]
 COPY docker-entrypoint.sh /usr/local/bin/
 ENTRYPOINT ["docker-entrypoint.sh"]
 
-EXPOSE 80 2098 2099
+EXPOSE 80 2098 2099 8082 9092 5435
 
 HEALTHCHECK --interval=1m --timeout=3s \
     CMD curl -f http://localhost/historian || exit 1
