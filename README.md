@@ -57,18 +57,18 @@ docker pull xjokay/ccu-historian
 
 These environment variables must be set for the first start:
 
-| ENV field               | Values           | Description                                       |
-|-------------------------|------------------|---------------------------------------------------|
-| CONFIG_CCU_TYPE         | CCU1, CCU2, CCU3 | Type of the CCU hardware                          |
-| CONFIG_CCU_IP           |                  | IP of the CCU                                     |
-| CONFIG_HOST_IP          |                  | IP of the Docker host                             |
-| CONFIG_HOST_XMLRPCPORT  | 2098             | _Optional:_ XML port of the RPC-port              |
-| CONFIG_HOST_BINRPCPORT  | 2099             | _Optional:_ Bin port of the RPC-port              |
-| CONFIG_CCU_PLUGIN1_TYPE | CUXD, HMWLGW     | _Optional:_ Additional plugins                    |
-| CONFIG_CCU_PLUGIN2_TYPE | CUXD, HMWLGW     | _Optional:_ Additional plugins                    |
-| CONFIG_CCU_USERNAME     |                  | _Optional:_ Username for authentication           |
-| CONFIG_CCU_PASSWORD     |                  | _Optional:_ Password for authentication           |
-| CONFIG_KEEP_MONTHS      |                  | _Optional:_ Cleanup of values older than x months |
+| ENV field               | Req. / Opt.  | Description                                              |
+|-------------------------|--------------|----------------------------------------------------------|
+| CONFIG_CCU_TYPE         | **Required** | Type of the CCU hardware, e.g. `CCU1`, `CCU2` or `CCU3`. |
+| CONFIG_CCU_IP           | **Required** | IP of the CCU.                                           |
+| CONFIG_HOST_IP          | **Required** | IP of the Docker host.                                   |
+| CONFIG_HOST_XMLRPCPORT  | *Optional*   | XML port of the RPC-port, e.g. `2098`.                   |
+| CONFIG_HOST_BINRPCPORT  | *Optional*   | Bin port of the RPC-port, e.g. `2099`.                   |
+| CONFIG_CCU_PLUGIN1_TYPE | *Optional*   | Additional plugins, e.g. `CUXD` or `HMWLGW`.             |
+| CONFIG_CCU_PLUGIN2_TYPE | *Optional*   | Additional plugins, e.g. `CUXD` or `HMWLGW`.             |
+| CONFIG_CCU_USERNAME     | *Optional*   | Username for authentication.                             |
+| CONFIG_CCU_PASSWORD     | *Optional*   | Password for authentication.                             |
+| CONFIG_KEEP_MONTHS      | *Optional*   | Cleanup of values older than x months. Maintenance is performed before the CCU-Historian is actually started. One after the other the CCU-Historian is called with the options -clean, -recalc and -compact. |
 
 Additional config settings should be made by changing the config file `ccu-historian.config`
 within the docker container.
