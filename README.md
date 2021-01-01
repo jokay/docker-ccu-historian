@@ -6,8 +6,8 @@ Docker image for [CCU-Historian](https://ccu-historian.de).
 
 | Service    | Stats |
 |------------|-------|
-| [Docker Hub](https://hub.docker.com/r/xjokay/ccu-historian) | [![Pulls](https://img.shields.io/docker/pulls/xjokay/ccu-historian.svg?style=flat-square)](https://hub.docker.com/r/xjokay/ccu-historian) [![Stars](https://img.shields.io/docker/stars/xjokay/ccu-historian.svg?style=flat-square)](https://hub.docker.com/r/xjokay/ccu-historian) |
-| [GitHub](https://github.com/x-jokay/docker-ccu-historian)   | [![Last commit](https://img.shields.io/github/last-commit/x-jokay/docker-ccu-historian.svg?style=flat-square)](https://github.com/x-jokay/docker-ccu-historian/commits/master) [![Issues](https://img.shields.io/github/issues-raw/x-jokay/docker-ccu-historian.svg?style=flat-square)](https://github.com/x-jokay/docker-ccu-historian/issues) [![PR](https://img.shields.io/github/issues-pr-raw/x-jokay/docker-ccu-historian.svg?style=flat-square)](https://github.com/x-jokay/docker-ccu-historian/pulls) [![Size](https://img.shields.io/github/repo-size/x-jokay/docker-ccu-historian.svg?style=flat-square)](https://github.com/x-jokay/docker-ccu-historian) [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/x-jokay/docker-ccu-historian/blob/master/LICENSE) |
+| [Docker Hub](https://hub.docker.com/r/xjokay/ccu-historian) | ![Pulls](https://img.shields.io/docker/pulls/xjokay/ccu-historian.svg?style=flat-square) ![Stars](https://img.shields.io/docker/stars/xjokay/ccu-historian.svg?style=flat-square) |
+| [GitHub](https://github.com/x-jokay/docker-ccu-historian)   | ![Last commit](https://img.shields.io/github/last-commit/x-jokay/docker-ccu-historian.svg?style=flat-square) ![Issues](https://img.shields.io/github/issues-raw/x-jokay/docker-ccu-historian.svg?style=flat-square) ![PR](https://img.shields.io/github/issues-pr-raw/x-jokay/docker-ccu-historian.svg?style=flat-square) |
 
 ## Installation
 
@@ -19,13 +19,13 @@ docker pull xjokay/ccu-historian
 
 | Tag    | Description | Size |
 |--------|-------------|------|
-| latest | Latest master build                                                                 | [![Size](https://shields.beevelop.com/docker/image/image-size/xjokay/ccu-historian/latest.svg?style=flat-square)](https://hub.docker.com/r/xjokay/ccu-historian/tags) |
-| 2.5.2  | Release [2.5.2](https://github.com/x-jokay/docker-ccu-historian/releases/tag/2.5.2) | [![Size](https://shields.beevelop.com/docker/image/image-size/xjokay/ccu-historian/2.5.2.svg?style=flat-square)](https://hub.docker.com/r/xjokay/ccu-historian/tags)  |
-| 2.5.1  | Release [2.5.1](https://github.com/x-jokay/docker-ccu-historian/releases/tag/2.5.1) | [![Size](https://shields.beevelop.com/docker/image/image-size/xjokay/ccu-historian/2.5.1.svg?style=flat-square)](https://hub.docker.com/r/xjokay/ccu-historian/tags)  |
-| 2.4.0  | Release [2.4.0](https://github.com/x-jokay/docker-ccu-historian/releases/tag/2.4.0) | [![Size](https://shields.beevelop.com/docker/image/image-size/xjokay/ccu-historian/2.4.0.svg?style=flat-square)](https://hub.docker.com/r/xjokay/ccu-historian/tags)  |
-| 2.3.0  | Release [2.3.0](https://github.com/x-jokay/docker-ccu-historian/releases/tag/2.3.0) | [![Size](https://shields.beevelop.com/docker/image/image-size/xjokay/ccu-historian/2.3.0.svg?style=flat-square)](https://hub.docker.com/r/xjokay/ccu-historian/tags)  |
-| 2.2.2  | Release [2.2.2](https://github.com/x-jokay/docker-ccu-historian/releases/tag/2.2.2) | [![Size](https://shields.beevelop.com/docker/image/image-size/xjokay/ccu-historian/2.2.2.svg?style=flat-square)](https://hub.docker.com/r/xjokay/ccu-historian/tags)  |
-| 2.2.1  | Release [2.2.1](https://github.com/x-jokay/docker-ccu-historian/releases/tag/2.2.1) | [![Size](https://shields.beevelop.com/docker/image/image-size/xjokay/ccu-historian/2.2.1.svg?style=flat-square)](https://hub.docker.com/r/xjokay/ccu-historian/tags)  |
+| latest | Latest `main` build                                                                 | ![Size](https://shields.beevelop.com/docker/image/image-size/xjokay/ccu-historian/latest.svg?style=flat-square) |
+| 2.5.2  | Release [2.5.2](https://github.com/x-jokay/docker-ccu-historian/releases/tag/2.5.2) | ![Size](https://shields.beevelop.com/docker/image/image-size/xjokay/ccu-historian/2.5.2.svg?style=flat-square)  |
+| 2.5.1  | Release [2.5.1](https://github.com/x-jokay/docker-ccu-historian/releases/tag/2.5.1) | ![Size](https://shields.beevelop.com/docker/image/image-size/xjokay/ccu-historian/2.5.1.svg?style=flat-square)  |
+| 2.4.0  | Release [2.4.0](https://github.com/x-jokay/docker-ccu-historian/releases/tag/2.4.0) | ![Size](https://shields.beevelop.com/docker/image/image-size/xjokay/ccu-historian/2.4.0.svg?style=flat-square)  |
+| 2.3.0  | Release [2.3.0](https://github.com/x-jokay/docker-ccu-historian/releases/tag/2.3.0) | ![Size](https://shields.beevelop.com/docker/image/image-size/xjokay/ccu-historian/2.3.0.svg?style=flat-square)  |
+| 2.2.2  | Release [2.2.2](https://github.com/x-jokay/docker-ccu-historian/releases/tag/2.2.2) | ![Size](https://shields.beevelop.com/docker/image/image-size/xjokay/ccu-historian/2.2.2.svg?style=flat-square)  |
+| 2.2.1  | Release [2.2.1](https://github.com/x-jokay/docker-ccu-historian/releases/tag/2.2.1) | ![Size](https://shields.beevelop.com/docker/image/image-size/xjokay/ccu-historian/2.2.1.svg?style=flat-square)  |
 
 ### Exposed Ports
 
