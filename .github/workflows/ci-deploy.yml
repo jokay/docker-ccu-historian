@@ -1,4 +1,4 @@
-name: dockerhub
+name: ci
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  dockerhub:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
