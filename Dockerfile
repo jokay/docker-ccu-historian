@@ -14,7 +14,7 @@ RUN echo "${CHECKSUM}  ccu-historian-${VERSION}-bin.zip" | sha512sum -c - && \
     mkdir /tmp/ccu-historian && \
     unzip ccu-historian-${VERSION}-bin.zip -d /tmp/ccu-historian
 
-FROM openjdk:11.0.9-jre
+FROM adoptopenjdk:11.0.9.1_1-jre-hotspot
 
 ARG VERSION
 
