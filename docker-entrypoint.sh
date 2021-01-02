@@ -5,7 +5,7 @@ PATH_CONFIG=${PATH_BASE}/config
 FILE_CONFIG=${PATH_CONFIG}/ccu-historian.config
 
 log () {
-    echo "`date +"%Y-%m-%d %T"`|INFO   |${1}"
+    echo "$(date +"%Y-%m-%d %T")|INFO   |${1}"
 }
 
 log_sub () {
@@ -29,7 +29,7 @@ if [[ ! -f "${FILE_CONFIG}" ]]; then
     if [[ -z "${CONFIG_HOST_IP}" || -z "${CONFIG_CCU_TYPE}" || -z "${CONFIG_CCU_IP}" ]]; then
         log "Required environment variables are missing!"
         log_sub "Please specify CONFIG_HOST_IP, CONFIG_CCU_TYPE and CONFIG_CCU_IP."
-        exit -1
+        exit 1
     fi
 
     touch "${FILE_CONFIG}"
@@ -73,13 +73,13 @@ if [ -n "${CONFIG_KEEP_MONTHS}" ]; then
     REF_DATE=$(date -d "-${CONFIG_KEEP_MONTHS} month" +%Y-%m-%d)
 
     log "Running database maintenance 'clean' (removes all data before ${REF_DATE}) ..."
-    java -jar ${PATH_BASE}/ccu-historian.jar -config ${FILE_CONFIG} -clean ${REF_DATE}
+    java -jar ${PATH_BASE}/ccu-historian.jar -config "${FILE_CONFIG}" -clean "${REF_DATE}"
 
     log "Running database maintenance 'recalc' ..."
-    java -jar ${PATH_BASE}/ccu-historian.jar -config ${FILE_CONFIG} -recalc
+    java -jar ${PATH_BASE}/ccu-historian.jar -config "${FILE_CONFIG}" -recalc
 
     log "Running database maintenance 'compact' ..."
-    java -jar ${PATH_BASE}/ccu-historian.jar -config ${FILE_CONFIG} -compact
+    java -jar ${PATH_BASE}/ccu-historian.jar -config "${FILE_CONFIG}" -compact
 fi
 
 log "Starting CCU-Historian using the following config:"
