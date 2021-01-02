@@ -34,19 +34,19 @@ This release uses CCU-Historian [2.3.0](https://github.com/mdzio/ccu-historian/r
 
 ## 2.2.2 (2019-10-06)
 
-This release uses CCU-Historian [2.2.2](https://github.com/mdzio/ccu-historian/releases/tag/2.2.2).
+This release used CCU-Historian [2.2.2](https://github.com/mdzio/ccu-historian/releases/tag/2.2.2).
 
 ## 2.2.1 (2019-09-27)
 
-This release uses CCU-Historian [2.2.1](https://github.com/mdzio/ccu-historian/releases/tag/2.2.1).
+This release used CCU-Historian [2.2.1](https://github.com/mdzio/ccu-historian/releases/tag/2.2.1).
 
 ## 2.2.0 (2019-09-03)
 
-This release uses CCU-Historian [2.2.0](https://github.com/mdzio/ccu-historian/releases/tag/2.2.0).
+This release used CCU-Historian [2.2.0](https://github.com/mdzio/ccu-historian/releases/tag/2.2.0).
 
 ### Improvements
 
-- Added multi-stage build. (thx to @zsisamci)
+- Added multi-stage build. (thx to [@zsisamci](https://github.com/zsisamci))
 - Added healthcheck.
 
 ### Bug fixes
