@@ -19,4 +19,5 @@ jobs:
         env:
           VALIDATE_ALL_CODEBASE: false
           DEFAULT_BRANCH: main
+          LOG_LEVEL: NOTICE
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
