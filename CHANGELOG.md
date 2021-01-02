@@ -6,7 +6,7 @@ This release uses CCU-Historian [2.5.2](https://github.com/mdzio/ccu-historian/r
 
 ### Features
 
-- Added support for multi-platform images. (#29)
+- Added support for multi-platform images. ([#29])
 
 ## [2.5.1](https://github.com/x-jokay/docker-ccu-historian/releases/tag/2.5.1) (2020-10-12)
 
@@ -14,11 +14,11 @@ This release uses CCU-Historian [2.5.1](https://github.com/mdzio/ccu-historian/r
 
 ### Features
 
-- Added new environment variable `CONFIG_KEEP_MONTHS` to be able to cleanup old data. (#10)
+- Added new environment variable `CONFIG_KEEP_MONTHS` to be able to cleanup old data. ([#10])
 
 ### Improvements
 
-- Exposed additional ports `8082` (Database Web-GUI Port), `9092` (Database TCP Port) and `5435` (Database PostgreSQL Port). (#13)
+- Exposed additional ports `8082` (Database Web-GUI Port), `9092` (Database TCP Port) and `5435` (Database PostgreSQL Port). ([#13])
 
 ## [2.4.0](https://github.com/x-jokay/docker-ccu-historian/releases/tag/2.4.0) (2020-06-11)
 
@@ -26,7 +26,7 @@ This release uses CCU-Historian [2.4.0](https://github.com/mdzio/ccu-historian/r
 
 ### Improvements
 
-- Added Support for username and password environment variables. (#7)
+- Added Support for username and password environment variables. ([#7])
 
 ## [2.3.0](https://github.com/x-jokay/docker-ccu-historian/releases/tag/2.3.0) (2019-11-09)
 
@@ -51,4 +51,10 @@ This release uses CCU-Historian [2.2.0](https://github.com/mdzio/ccu-historian/r
 
 ### Bug fixes
 
-- Fixed config file generation. (#3)
+- Fixed config file generation. ([#3])
+
+[#3]: https://github.com/x-jokay/docker-ccu-historian/issues/3
+[#7]: https://github.com/x-jokay/docker-ccu-historian/issues/7
+[#10]: https://github.com/x-jokay/docker-ccu-historian/issues/10
+[#13]: https://github.com/x-jokay/docker-ccu-historian/issues/13
+[#29]: https://github.com/x-jokay/docker-ccu-historian/issues/29
