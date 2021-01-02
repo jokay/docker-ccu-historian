@@ -11,6 +11,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+      - name: Get the version
+        id: get_version
+        run: echo ::set-output name=VERSION::${GITHUB_REF#refs/tags/}
       - uses: actions/create-release@v1
         id: create_release
         env:
@@ -35,4 +38,4 @@ jobs:
           platforms: linux/amd64,linux/arm/v7,linux/arm64,linux/ppc64le,linux/s390x
           push: true
           tags: |
-            xjokay/ccu-historian:${{ github.event.release.tag_name }}
+            xjokay/ccu-historian:${{ steps.get_version.outputs.VERSION }}
