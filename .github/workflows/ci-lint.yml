@@ -14,7 +14,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Lint
+      - name: Lint markdown
+        uses: nosborn/github-action-markdown-cli@v1.1.1
+        with:
+          files: .
+          config_file: ".markdownlint.json"
+      - name: Lint Docker
         uses: luke142367/Docker-Lint-Action@v1.1.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

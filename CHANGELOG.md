@@ -14,11 +14,13 @@ This release uses CCU-Historian [2.5.1](https://github.com/mdzio/ccu-historian/r
 
 ### Features
 
-- Added new environment variable `CONFIG_KEEP_MONTHS` to be able to cleanup old data. ([#10])
+- Added new environment variable `CONFIG_KEEP_MONTHS` to be able to cleanup old
+data. ([#10])
 
 ### Improvements
 
-- Exposed additional ports `8082` (Database Web-GUI Port), `9092` (Database TCP Port) and `5435` (Database PostgreSQL Port). ([#13])
+- Exposed additional ports `8082` (Database Web-GUI Port), `9092` (Database TCP
+Port) and `5435` (Database PostgreSQL Port). ([#13])
 
 ## [2.4.0](https://github.com/x-jokay/docker-ccu-historian/releases/tag/2.4.0) (2020-06-11)
 

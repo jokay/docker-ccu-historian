@@ -63,7 +63,8 @@ These environment variables must be set for the first start:
 Additional config settings should be made by changing the config file `ccu-historian.config`
 within the docker container.
 
-It is easier to export the config folder out of the docker container and edit the file there.
+It is easier to export the config folder out of the docker container and edit
+the file there.
 
 ## Samples
 
