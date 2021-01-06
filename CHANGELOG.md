@@ -1,6 +1,6 @@
 # Changelog
 
-## [2.5.2](https://github.com/x-jokay/docker-ccu-historian/releases/tag/2.5.2) (2021-01-02)
+## [2.5.2](https://github.com/x-jokay/docker-ccu-historian/releases/tag/2.5.2) (2021-01-06)
 
 This release uses CCU-Historian [2.5.2](https://github.com/mdzio/ccu-historian/releases/tag/2.5.2).
 
