@@ -39,7 +39,6 @@ jobs:
           build-args: |
             MAINTAINER=${{ github.repository_owner }}
             REPOSITORY=https://github.com/${{ github.repository }}
-            VERSION=${{ env.VERSION }}
             COMMIT=${{ github.sha }}
             DATE=${{ env.DATE }}
           tags: |
