@@ -1,20 +1,26 @@
 name: release
 
+env:
+  DOCKERHUB_REPO: "xjokay/ccu-historian"
+  PLATFORMS: "linux/amd64,linux/arm/v7,linux/arm64,linux/ppc64le,linux/s390x"
+  VERSION: "latest"
+
 on:
+  workflow_dispatch:
   push:
     tags:
       - '*'
-  workflow_dispatch:
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+      - name: Set variables
+        run: |
+          echo "DATE=$(date -u +%Y-%m-%dT%H:%M:%S%z)" >> $GITHUB_ENV
+          echo "VERSION=${GITHUB_REF#refs/tags/}" >> $GITHUB_ENV
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Get the version
-        id: get_version
-        run: echo ::set-output name=VERSION::${GITHUB_REF#refs/tags/}
       - uses: actions/create-release@v1
         id: create_release
         env:
@@ -36,7 +42,13 @@ jobs:
         with:
           context: .
           file: ./Dockerfile
-          platforms: linux/amd64,linux/arm/v7,linux/arm64,linux/ppc64le,linux/s390x
+          platforms: ${{ env.PLATFORMS }}
           push: true
+          build-args: |
+            MAINTAINER=${{ github.repository_owner }}
+            REPOSITORY=https://github.com/${{ github.repository }}
+            VERSION=${{ env.VERSION }}
+            COMMIT=${{ github.sha }}
+            DATE=${{ env.DATE }}
           tags: |
-            xjokay/ccu-historian:${{ steps.get_version.outputs.VERSION }}
+            ${{ env.DOCKERHUB_REPO }}:${{ env.VERSION }}

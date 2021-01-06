@@ -17,7 +17,17 @@ RUN echo "${CHECKSUM}  ccu-historian-${VERSION}-bin.zip" | sha512sum -c - && \
 
 FROM adoptopenjdk:11.0.9.1_1-jre-hotspot
 
+ARG MAINTAINER
+ARG REPOSITORY
 ARG VERSION
+ARG COMMIT
+ARG DATE
+
+LABEL Maintainer=${MAINTAINER} \
+      Repository=${REPOSITORY} \
+      Version=${VERSION} \
+      Commit=${COMMIT} \
+      Date=${DATE}
 
 ENV VERSION ${VERSION}
 
