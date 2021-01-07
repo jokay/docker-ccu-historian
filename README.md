@@ -19,7 +19,7 @@ docker pull xjokay/ccu-historian
 
 | Tag    | Description | Size |
 |--------|-------------|------|
-| latest | Latest `main` build                                                                 | ![Size](https://shields.beevelop.com/docker/image/image-size/xjokay/ccu-historian/latest.svg?style=flat-square) |
+| latest | [Latest](https://github.com/x-jokay/docker-ccu-historian/releases/latest) release   | ![Size](https://shields.beevelop.com/docker/image/image-size/xjokay/ccu-historian/latest.svg?style=flat-square) |
 | 2.5.2  | Release [2.5.2](https://github.com/x-jokay/docker-ccu-historian/releases/tag/2.5.2) | ![Size](https://shields.beevelop.com/docker/image/image-size/xjokay/ccu-historian/2.5.2.svg?style=flat-square)  |
 
 ### Exposed Ports
