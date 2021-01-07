@@ -1,25 +1,34 @@
-name: ci
+name: release
 
 env:
   DOCKERHUB_REPO: "xjokay/ccu-historian"
   PLATFORMS: "linux/amd64,linux/arm/v7,linux/arm64,linux/ppc64le,linux/s390x"
-  VERSION: "latest"
 
 on:
   workflow_dispatch:
   push:
-    branches:
-      - main
+    tags:
+      - '*'
 
 jobs:
-  deploy:
+  dockerhub:
     runs-on: ubuntu-latest
     steps:
       - name: Set variables
         run: |
           echo "DATE=$(date -u +%Y-%m-%dT%H:%M:%S%z)" >> $GITHUB_ENV
+          echo "VERSION=${GITHUB_REF#refs/tags/}" >> $GITHUB_ENV
       - name: Checkout
         uses: actions/checkout@v2
+      - name: Create release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: ${{ github.ref }}
+          body: |
+            Changes for release **${{ env.VERSION }}** can be seen in the [CHANGELOG.md](https://github.com/${{ github.repository }}/blob/${{ env.VERSION }}/CHANGELOG.md).
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
       - name: Set up Docker Buildx
@@ -39,7 +48,9 @@ jobs:
           build-args: |
             MAINTAINER=${{ github.repository_owner }}
             REPOSITORY=https://github.com/${{ github.repository }}
+            VERSION=${{ env.VERSION }}
             COMMIT=${{ github.sha }}
             DATE=${{ env.DATE }}
           tags: |
+            ${{ env.DOCKERHUB_REPO }}:latest
             ${{ env.DOCKERHUB_REPO }}:${{ env.VERSION }}
