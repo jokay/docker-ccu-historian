@@ -11,7 +11,7 @@ WORKDIR /tmp
 ADD https://github.com/mdzio/ccu-historian/releases/download/${VERSION}/ccu-historian-${VERSION}-bin.zip .
 
 # hadolint ignore=DL4006
-RUN echo "${CHECKSUM}  ccu-historian-${VERSION}-bin.zip" | sha512sum -c - && \
+RUN printf "%s  ccu-historian-%s-bin.zip" "${CHECKSUM}" "${VERSION}" | sha512sum -c - && \
     mkdir /tmp/ccu-historian && \
     unzip ccu-historian-${VERSION}-bin.zip -d /tmp/ccu-historian
 
@@ -26,7 +26,7 @@ ENV TZ UTC
 WORKDIR /opt/ccu-historian
 
 RUN mkdir -p /database && \
-    echo ${TZ} > /etc/timezone
+    printf "%s" "${TZ}" > /etc/timezone
 
 COPY --from=build /tmp/ccu-historian /opt/ccu-historian
 
