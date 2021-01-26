@@ -19,9 +19,8 @@ FROM docker.io/adoptopenjdk:11.0.9.1_1-jre-hotspot
 
 ARG VERSION
 
-ENV VERSION ${VERSION}
-
-ENV TZ UTC
+ENV VERSION ${VERSION} \
+    TZ UTC
 
 WORKDIR /opt/ccu-historian
 
