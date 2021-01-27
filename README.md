@@ -1,6 +1,6 @@
 # Docker CCU-Historian
 
-Docker image for [CCU-Historian](https://ccu-historian.de).
+Docker image for [CCU-Historian](https://github.com/mdzio/ccu-historian).
 
 ## Information
 
