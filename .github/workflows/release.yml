@@ -101,4 +101,4 @@ jobs:
           tag_name: ${{ github.ref }}
           release_name: ${{ github.ref }}
           body: |
-            Changes for release **${{ env.VERSION }}** can be seen in the [CHANGELOG.md](https://github.com/${{ github.repository }}/blob/${{ env.VERSION }}/CHANGELOG.md).
+            Please refer to [CHANGELOG.md](https://github.com/${{ github.repository }}/blob/main/CHANGELOG.md) for details.

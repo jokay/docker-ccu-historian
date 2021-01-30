@@ -2,11 +2,11 @@
 
 ## [2.5.3](https://github.com/x-jokay/docker-ccu-historian/releases/tag/2.5.3) (2021-01-21)
 
-This release uses CCU-Historian [2.5.3](https://github.com/mdzio/ccu-historian/releases/tag/2.5.3).
+This release contains CCU-Historian [2.5.3](https://github.com/mdzio/ccu-historian/releases/tag/2.5.3).
 
 ## [2.5.2](https://github.com/x-jokay/docker-ccu-historian/releases/tag/2.5.2) (2021-01-10)
 
-This release uses CCU-Historian [2.5.2](https://github.com/mdzio/ccu-historian/releases/tag/2.5.2).
+This release contains CCU-Historian [2.5.2](https://github.com/mdzio/ccu-historian/releases/tag/2.5.2).
 
 ### Features
 
@@ -14,7 +14,7 @@ This release uses CCU-Historian [2.5.2](https://github.com/mdzio/ccu-historian/r
 
 ## 2.5.1 (2020-10-12)
 
-This release used CCU-Historian [2.5.1](https://github.com/mdzio/ccu-historian/releases/tag/2.5.1).
+This release contained CCU-Historian [2.5.1](https://github.com/mdzio/ccu-historian/releases/tag/2.5.1).
 
 ### Features
 
@@ -28,7 +28,7 @@ Port) and `5435` (Database PostgreSQL Port). ([#13])
 
 ## 2.4.0 (2020-06-11)
 
-This release used CCU-Historian [2.4.0](https://github.com/mdzio/ccu-historian/releases/tag/2.4.0).
+This release contained CCU-Historian [2.4.0](https://github.com/mdzio/ccu-historian/releases/tag/2.4.0).
 
 ### Improvements
 
@@ -36,19 +36,19 @@ This release used CCU-Historian [2.4.0](https://github.com/mdzio/ccu-historian/r
 
 ## 2.3.0 (2019-11-09)
 
-This release used CCU-Historian [2.3.0](https://github.com/mdzio/ccu-historian/releases/tag/2.3.0).
+This release contained CCU-Historian [2.3.0](https://github.com/mdzio/ccu-historian/releases/tag/2.3.0).
 
 ## 2.2.2 (2019-10-06)
 
-This release used CCU-Historian [2.2.2](https://github.com/mdzio/ccu-historian/releases/tag/2.2.2).
+This release contained CCU-Historian [2.2.2](https://github.com/mdzio/ccu-historian/releases/tag/2.2.2).
 
 ## 2.2.1 (2019-09-27)
 
-This release used CCU-Historian [2.2.1](https://github.com/mdzio/ccu-historian/releases/tag/2.2.1).
+This release contained CCU-Historian [2.2.1](https://github.com/mdzio/ccu-historian/releases/tag/2.2.1).
 
 ## 2.2.0 (2019-09-03)
 
-This release used CCU-Historian [2.2.0](https://github.com/mdzio/ccu-historian/releases/tag/2.2.0).
+This release contained CCU-Historian [2.2.0](https://github.com/mdzio/ccu-historian/releases/tag/2.2.0).
 
 ### Improvements
 
