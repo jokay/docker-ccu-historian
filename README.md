@@ -68,8 +68,6 @@ the file there.
 ### docker-compose
 
 ```yaml
-version: '3.8'
-
 services:
   app:
     image: docker.io/xjokay/ccu-historian:latest
