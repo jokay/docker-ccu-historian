@@ -67,7 +67,7 @@ the file there.
 
 ### docker-compose
 
-```yaml
+```yml
 services:
   app:
     image: docker.io/xjokay/ccu-historian:latest
