@@ -2,7 +2,7 @@ name: release
 
 env:
   GITHUB_REGISTRY: "ghcr.io/x-jokay/ccu-historian"
-  GITLAB_REGISTRY: "registry.gitlab.com/x-jokay/docker-ccu-historian"
+  GITLAB_REGISTRY: "registry.gitlab.com/jokay/docker-ccu-historian"
   DOCKERHUB_REGISTRY: "docker.io/xjokay/ccu-historian"
   PLATFORMS: "linux/amd64,linux/arm/v7,linux/arm64,linux/ppc64le,linux/s390x"
 
@@ -43,7 +43,7 @@ jobs:
         uses: docker/login-action@v1.8.0
         with:
           registry: registry.gitlab.com
-          username: ${{ github.repository_owner }}
+          username: ${{ secrets.GITLAB_USERNAME }}
           password: ${{ secrets.GITLAB_TOKEN }}
       - name: Login to DockerHub
         uses: docker/login-action@v1.8.0
