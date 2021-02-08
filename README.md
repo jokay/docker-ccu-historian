@@ -4,9 +4,9 @@ Docker image for [CCU-Historian](https://github.com/mdzio/ccu-historian).
 
 ## Information
 
-| Service    | Stats |
-|------------|-------|
-| [GitHub](https://github.com/x-jokay/docker-ccu-historian)   | ![Last commit](https://img.shields.io/github/last-commit/x-jokay/docker-ccu-historian.svg?style=flat-square) ![Issues](https://img.shields.io/github/issues-raw/x-jokay/docker-ccu-historian.svg?style=flat-square) ![PR](https://img.shields.io/github/issues-pr-raw/x-jokay/docker-ccu-historian.svg?style=flat-square) |
+| Service | Stats |
+|---------|-------|
+| [GitHub](https://github.com/jokay/docker-ccu-historian) | ![Last commit](https://img.shields.io/github/last-commit/jokay/docker-ccu-historian.svg?style=flat-square) ![Issues](https://img.shields.io/github/issues-raw/jokay/docker-ccu-historian.svg?style=flat-square) ![PR](https://img.shields.io/github/issues-pr-raw/jokay/docker-ccu-historian.svg?style=flat-square) |
 | [Docker Hub](https://hub.docker.com/r/xjokay/ccu-historian) | ![Pulls](https://img.shields.io/docker/pulls/xjokay/ccu-historian.svg?style=flat-square) ![Stars](https://img.shields.io/docker/stars/xjokay/ccu-historian.svg?style=flat-square) |
 
 ## Usage
@@ -19,8 +19,8 @@ docker pull docker.io/xjokay/ccu-historian:latest
 
 | Tag       | Description | Size |
 |-----------|-------------|------|
-| latest    | [Latest](https://github.com/x-jokay/docker-ccu-historian/releases/latest) release | ![Size](https://shields.beevelop.com/docker/image/image-size/xjokay/ccu-historian/latest.svg?style=flat-square) |
-| {release} | Specific release version, see available [releases](https://github.com/x-jokay/docker-ccu-historian/releases) | |
+| latest    | [Latest](https://github.com/jokay/docker-ccu-historian/releases/latest) release | ![Size](https://shields.beevelop.com/docker/image/image-size/xjokay/ccu-historian/latest.svg?style=flat-square) |
+| {release} | Specific release version, see available [releases](https://github.com/jokay/docker-ccu-historian/releases) | |
 
 ### Exposed Ports
 

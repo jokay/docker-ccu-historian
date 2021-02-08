@@ -1,10 +1,10 @@
 # Changelog
 
-## [2.5.3](https://github.com/x-jokay/docker-ccu-historian/releases/tag/2.5.3) (2021-01-21)
+## [2.5.3](https://github.com/jokay/docker-ccu-historian/releases/tag/2.5.3) (2021-01-21)
 
 This release contains CCU-Historian [2.5.3](https://github.com/mdzio/ccu-historian/releases/tag/2.5.3).
 
-## [2.5.2](https://github.com/x-jokay/docker-ccu-historian/releases/tag/2.5.2) (2021-01-10)
+## [2.5.2](https://github.com/jokay/docker-ccu-historian/releases/tag/2.5.2) (2021-01-10)
 
 This release contains CCU-Historian [2.5.2](https://github.com/mdzio/ccu-historian/releases/tag/2.5.2).
 
@@ -59,8 +59,8 @@ This release contained CCU-Historian [2.2.0](https://github.com/mdzio/ccu-histor
 
 - Fixed config file generation. ([#3])
 
-[#3]: https://github.com/x-jokay/docker-ccu-historian/issues/3
-[#7]: https://github.com/x-jokay/docker-ccu-historian/issues/7
-[#10]: https://github.com/x-jokay/docker-ccu-historian/issues/10
-[#13]: https://github.com/x-jokay/docker-ccu-historian/issues/13
-[#29]: https://github.com/x-jokay/docker-ccu-historian/issues/29
+[#3]: https://github.com/jokay/docker-ccu-historian/issues/3
+[#7]: https://github.com/jokay/docker-ccu-historian/issues/7
+[#10]: https://github.com/jokay/docker-ccu-historian/issues/10
+[#13]: https://github.com/jokay/docker-ccu-historian/issues/13
+[#29]: https://github.com/jokay/docker-ccu-historian/issues/29
