@@ -4,9 +4,9 @@
 
 This release contains CCU-Historian [2.5.3](https://github.com/mdzio/ccu-historian/releases/tag/2.5.3).
 
-## [2.5.2](https://github.com/jokay/docker-ccu-historian/releases/tag/2.5.2) (2021-01-10)
+## 2.5.2 (2021-01-10)
 
-This release contains CCU-Historian [2.5.2](https://github.com/mdzio/ccu-historian/releases/tag/2.5.2).
+This release contained CCU-Historian [2.5.2](https://github.com/mdzio/ccu-historian/releases/tag/2.5.2).
 
 ### Features
 
