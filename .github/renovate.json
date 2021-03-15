@@ -1,5 +1,23 @@
 {
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:base"
-  ]
+    "config:base",
+    "docker:enableMajor"
+  ],
+  "packageRules": [
+    {
+      "updateTypes": [
+        "minor",
+        "patch",
+        "pin",
+        "digest"
+      ],
+      "automerge": false
+    }
+  ],
+  "labels": [
+    "dependencies"
+  ],
+  "prHourlyLimit": 0,
+  "prConcurrentLimit": 0
 }
