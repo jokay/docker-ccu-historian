@@ -4,17 +4,6 @@
     "config:base",
     "docker:enableMajor"
   ],
-  "packageRules": [
-    {
-      "updateTypes": [
-        "minor",
-        "patch",
-        "pin",
-        "digest"
-      ],
-      "automerge": false
-    }
-  ],
   "labels": [
     "dependencies"
   ],
