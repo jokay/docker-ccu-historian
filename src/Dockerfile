@@ -13,14 +13,14 @@ ADD https://github.com/mdzio/ccu-historian/releases/download/${VERSION}/ccu-hist
 # hadolint ignore=DL4006
 RUN printf "%s  ccu-historian-%s-bin.zip" "${CHECKSUM}" "${VERSION}" | sha512sum -c - && \
     mkdir /tmp/ccu-historian && \
-    unzip ccu-historian-${VERSION}-bin.zip -d /tmp/ccu-historian
+    unzip "ccu-historian-${VERSION}-bin.zip" -d /tmp/ccu-historian
 
 FROM docker.io/adoptopenjdk:11.0.9.1_1-jre-hotspot
 
 ARG VERSION
 
-ENV VERSION ${VERSION} \
-    TZ UTC
+ENV VERSION "${VERSION}"
+ENV TZ "UTC"
 
 WORKDIR /opt/ccu-historian
 
