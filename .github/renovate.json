@@ -8,5 +8,14 @@
     "dependencies"
   ],
   "prHourlyLimit": 0,
-  "prConcurrentLimit": 0
+  "prConcurrentLimit": 0,
+  "packageRules": [
+    {
+      "matchPackageNames": [
+        "adoptopenjdk"
+      ],
+      "versioning": "loose",
+      "allowedVersions": "/^\\d+\\.\\d+\\.\\d+_\\d+-jre-hotspot$/"
+    }
+  ]
 }
