@@ -5,7 +5,8 @@
     ":disableRateLimiting",
     ":automergeDigest",
     "docker:enableMajor",
-    "docker:pinDigests"
+    "docker:pinDigests",
+    "helpers:pinGitHubActionDigests"
   ],
   "labels": [
     "dependencies"
