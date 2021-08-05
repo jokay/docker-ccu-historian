@@ -1,7 +1,7 @@
 ARG VERSION=2.6.0
 ARG CHECKSUM=f7c9250746616b0f590e52b6864d67bcf2fdb0e665f7c1279bbb36cd669205288a4844684aaa06ba45ce2281ecab5307b95b0d70d211c4a99b6b431f9b8dd3b0
 
-FROM docker.io/alpine:3.14.0 AS build
+FROM docker.io/alpine:3.14.0@sha256:adab3844f497ab9171f070d4cae4114b5aec565ac772e2f2579405b78be67c96 AS build
 
 ARG VERSION
 ARG CHECKSUM
@@ -15,7 +15,7 @@ RUN printf "%s  ccu-historian-%s-bin.zip" "${CHECKSUM}" "${VERSION}" | sha512sum
     mkdir /tmp/ccu-historian && \
     unzip "ccu-historian-${VERSION}-bin.zip" -d /tmp/ccu-historian
 
-FROM docker.io/adoptopenjdk:11.0.11_9-jre-hotspot
+FROM docker.io/adoptopenjdk:11.0.11_9-jre-hotspot@sha256:9b7f71128a540e06b87553c551fd7d2d3e20cea462ffdf340f5327554b953183
 
 ARG VERSION
 
