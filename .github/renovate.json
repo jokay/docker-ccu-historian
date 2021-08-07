@@ -13,8 +13,12 @@
   ],
   "packageRules": [
     {
-      "matchPaths": [".github/workflows/*.yml"],
-      "labels": ["github-actions"],
+      "matchPaths": [
+        ".github/workflows/*.yml"
+      ],
+      "labels": [
+        "github-actions"
+      ],
       "automerge": true
     },
     {
