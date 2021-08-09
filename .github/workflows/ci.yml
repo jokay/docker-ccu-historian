@@ -20,7 +20,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Lint Code Base
-        uses: github/super-linter@148622b27391c3839bd325421b4153f63af524e4 # renovate: tag=v4.6.0
+        uses: github/super-linter@c18d840c4129f8aa5bc8ad79d43ebf8557bcea70 # renovate: tag=v4.6.1
         env:
           VALIDATE_ALL_CODEBASE: false
           DEFAULT_BRANCH: main
