@@ -15,7 +15,7 @@ RUN printf "%s  ccu-historian-%s-bin.zip" "${CHECKSUM}" "${VERSION}" | sha512sum
     mkdir /tmp/ccu-historian && \
     unzip "ccu-historian-${VERSION}-bin.zip" -d /tmp/ccu-historian
 
-FROM docker.io/adoptopenjdk:11.0.11_9-jre-hotspot@sha256:86fe70c431aab6e8c967469d001d41a9382466661daa53907df984bf4893fcdb
+FROM docker.io/adoptopenjdk:11.0.11_9-jre-hotspot@sha256:adaff27b0029b4f8d04fd64366863a4b6495d1f62ccdb8d18510dfc83328e6f0
 
 ARG VERSION
 
