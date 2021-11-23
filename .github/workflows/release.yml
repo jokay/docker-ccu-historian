@@ -27,7 +27,7 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@94ab11c41e45d028884a99163086648e898eed25 # renovate: tag=v1.6.0
       - name: Cache Docker layers
-        uses: actions/cache@c64c572235d810460d0d6876e9c705ad5002b353 # renovate: tag=v2.1.6
+        uses: actions/cache@937d24475381cd9c75ae6db12cb4e79714b926ed # renovate: tag=v2.1.7
         with:
           path: /tmp/.buildx-cache
           key: ${{ runner.os }}-buildx-${{ github.sha }}
