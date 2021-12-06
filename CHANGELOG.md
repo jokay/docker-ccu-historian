@@ -71,7 +71,7 @@ This release contained CCU-Historian [2.2.0](https://github.com/mdzio/ccu-histor
 - Added multi-stage build. (thx to [@zsisamci](https://github.com/zsisamci))
 - Added healthcheck.
 
-### Bug fixes
+### Bugfixes
 
 - Fixed config file generation. ([#3])
 
