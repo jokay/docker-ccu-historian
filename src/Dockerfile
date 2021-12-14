@@ -15,7 +15,7 @@ RUN printf "%s  ccu-historian-%s-bin.zip" "${CHECKSUM}" "${VERSION}" | sha512sum
     mkdir /tmp/ccu-historian && \
     unzip "ccu-historian-${VERSION}-bin.zip" -d /tmp/ccu-historian
 
-FROM docker.io/adoptopenjdk:11.0.11_9-jre-hotspot@sha256:ad6431b2e2a6f8016aa6d79c3f588783af9fdc06cafe131fd0d3faf560914b13
+FROM docker.io/eclipse-temurin:11.0.13_8-jre-focal
 
 ARG VERSION
 
