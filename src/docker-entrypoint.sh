@@ -74,7 +74,9 @@ if [ -n "${CONFIG_KEEP_MONTHS}" ]; then
 
     log "Running database maintenance 'clean' (removes all data before ${REF_DATE}) ..."
     java -jar ${PATH_BASE}/ccu-historian.jar -config "${FILE_CONFIG}" -clean "${REF_DATE}"
+fi
 
+if [[ -n "${CONFIG_KEEP_MONTHS}" || "${CONFIG_MAINTENANCE}" == "true" ]]; then
     log "Running database maintenance 'recalc' ..."
     java -jar ${PATH_BASE}/ccu-historian.jar -config "${FILE_CONFIG}" -recalc
 
