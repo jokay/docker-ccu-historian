@@ -1,5 +1,3 @@
-# yamllint disable
-
 name: ci
 
 on:
