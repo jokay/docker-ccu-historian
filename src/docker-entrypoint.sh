@@ -1,8 +1,8 @@
 #!/bin/bash
 
-PATH_BASE=/opt/ccu-historian
-PATH_CONFIG=${PATH_BASE}/config
-FILE_CONFIG=${PATH_CONFIG}/ccu-historian.config
+PATH_BASE="/opt/ccu-historian"
+PATH_CONFIG="${PATH_BASE}/config"
+FILE_CONFIG="${PATH_CONFIG}/ccu-historian.config"
 
 log () {
     echo "$(date +"%Y-%m-%d %T")|INFO   |${1}"
@@ -73,15 +73,18 @@ if [ -n "${CONFIG_KEEP_MONTHS}" ]; then
     REF_DATE=$(date -d "-${CONFIG_KEEP_MONTHS} month" +%Y-%m-%d)
 
     log "Running database maintenance 'clean' (removes all data before ${REF_DATE}) ..."
-    java -jar ${PATH_BASE}/ccu-historian.jar -config "${FILE_CONFIG}" -clean "${REF_DATE}"
+    # shellcheck disable=SC2086
+    java ${CONFIG_JAVA_OPTS} -jar "${PATH_BASE}/ccu-historian.jar" -config "${FILE_CONFIG}" -clean "${REF_DATE}"
 fi
 
 if [[ -n "${CONFIG_KEEP_MONTHS}" || "${CONFIG_MAINTENANCE}" == "true" ]]; then
     log "Running database maintenance 'recalc' ..."
-    java -jar ${PATH_BASE}/ccu-historian.jar -config "${FILE_CONFIG}" -recalc
+    # shellcheck disable=SC2086
+    java ${CONFIG_JAVA_OPTS} -jar "${PATH_BASE}/ccu-historian.jar" -config "${FILE_CONFIG}" -recalc
 
     log "Running database maintenance 'compact' ..."
-    java -jar ${PATH_BASE}/ccu-historian.jar -config "${FILE_CONFIG}" -compact
+    # shellcheck disable=SC2086
+    java ${CONFIG_JAVA_OPTS} -jar "${PATH_BASE}/ccu-historian.jar" -config "${FILE_CONFIG}" -compact
 fi
 
 log "Starting CCU-Historian using the following config:"
@@ -92,4 +95,5 @@ do
 done < "${FILE_CONFIG}"
 log_sub "---"
 
-java -jar ${PATH_BASE}/ccu-historian.jar -config ${FILE_CONFIG}
+# shellcheck disable=SC2086
+java ${CONFIG_JAVA_OPTS} -jar "${PATH_BASE}/ccu-historian.jar" -config "${FILE_CONFIG}"
