@@ -1,5 +1,14 @@
 # Changelog
 
+## TBA
+
+### Features
+
+- Added new environment variable `CONFIG_MAINTENANCE` to be able to run the
+  maintenance without removing old data. ([#140])
+- Added new environment variable `CONFIG_JAVA_OPTS` to be able to set Java
+  custom settings. ([#148])
+
 ## [2.8.3](https://github.com/jokay/docker-ccu-historian/releases/tag/2.8.3) (2022-01-08)
 
 This release contains CCU-Historian [2.8.3](https://github.com/mdzio/ccu-historian/releases/tag/2.8.3).
@@ -88,3 +97,5 @@ This release contained CCU-Historian [2.2.0](https://github.com/mdzio/ccu-histor
 [#10]: https://github.com/jokay/docker-ccu-historian/issues/10
 [#13]: https://github.com/jokay/docker-ccu-historian/issues/13
 [#29]: https://github.com/jokay/docker-ccu-historian/issues/29
+[#140]: https://github.com/jokay/docker-ccu-historian/issues/140
+[#148]: https://github.com/jokay/docker-ccu-historian/issues/148
