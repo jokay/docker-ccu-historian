@@ -57,6 +57,7 @@ These environment variables must be set for the first start:
 | CONFIG_CCU_PASSWORD     | *Optional*   | Password for authentication.                                                                                                                                                                                             |
 | CONFIG_KEEP_MONTHS      | *Optional*   | Cleanup of values older than x months. Maintenance is performed before the CCU-Historian is actually started. One after the other the CCU-Historian is called with the options **-clean**, **-recalc** and **-compact**. |
 | CONFIG_MAINTENANCE      | *Optional*   | Supported values are `true` and `false`. Maintenance is performed before the CCU-Historian is actually started. One after the other the CCU-Historian is called with the options **-recalc** and **-compact**.           |
+| CONFIG_JAVA_OPTS        | *Optional*   | Allows to set Java custom settings, e.g. `"-Xmx100m"` to set the max heap size to 100 megabytes.                                                                                                                         |
 
 Additional config settings should be made by changing the config file `ccu-historian.config`
 within the docker container.
