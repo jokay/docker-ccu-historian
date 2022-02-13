@@ -33,8 +33,8 @@ COPY --from=build /tmp/ccu-historian /opt/ccu-historian
 
 VOLUME ["/opt/ccu-historian/config", "/database"]
 
-COPY docker-entrypoint.sh /usr/local/bin/
-ENTRYPOINT ["docker-entrypoint.sh"]
+COPY entrypoint.sh /usr/local/bin/
+ENTRYPOINT ["entrypoint.sh"]
 
 EXPOSE 80 2098 2099 8082 9092 5435
 
