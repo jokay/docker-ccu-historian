@@ -22,7 +22,7 @@ jobs:
       - name: Lint Code Base
         uses: github/super-linter@a6ab9d5ccb4b00819f732c278f91f17b726004b8 # tag=v4.9.0
         env:
-          VALIDATE_ALL_CODEBASE: false
+          VALIDATE_ALL_CODEBASE: true
           DEFAULT_BRANCH: main
           LOG_LEVEL: NOTICE
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
