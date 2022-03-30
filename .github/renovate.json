@@ -8,23 +8,15 @@
     "docker:pinDigests",
     "helpers:pinGitHubActionDigests"
   ],
-  "labels": [
-    "dependencies"
-  ],
+  "labels": ["dependencies"],
   "packageRules": [
     {
-      "matchPaths": [
-        ".github/workflows/*.yml"
-      ],
-      "labels": [
-        "github-actions"
-      ],
+      "matchPaths": [".github/workflows/*.yml"],
+      "labels": ["github-actions"],
       "automerge": true
     },
     {
-      "matchPackageNames": [
-        "adoptopenjdk"
-      ],
+      "matchPackageNames": ["adoptopenjdk"],
       "versioning": "loose",
       "allowedVersions": "/^\\d+\\.\\d+\\.\\d+_\\d+-jre-hotspot$/"
     }
