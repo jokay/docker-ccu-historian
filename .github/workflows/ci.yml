@@ -22,10 +22,11 @@ jobs:
       - name: Megalinter
         uses: megalinter/megalinter@v5
         env:
-          APPLY_FIXES: "all"
+          APPLY_FIXES: "none"
           BASH_SHFMT_DISABLE_ERRORS: "false"
           DISABLE_LINTERS: MARKDOWN_MARKDOWN_LINK_CHECK,SPELL_CSPELL
           FILTER_REGEX_EXCLUDE: .*/ISSUE_TEMPLATE/.*
+          FLAVOR_SUGGESTIONS: "false"
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           JSON_PRETTIER_DISABLE_ERRORS: "false"
           LOG_LEVEL: WARN
@@ -34,7 +35,7 @@ jobs:
           PRINT_ALPACA: "false"
           SHOW_ELAPSED_TIME: "true"
           SPELL_MISSPELL_DISABLE_ERRORS: "true"
-          VALIDATE_ALL_CODEBASE: "true"
+          VALIDATE_ALL_CODEBASE: "false"
           YAML_PRETTIER_DISABLE_ERRORS: "false"
       - name: Artifacts
         if: ${{ success() }} || ${{ failure() }}
