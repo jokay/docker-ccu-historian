@@ -20,10 +20,13 @@ jobs:
         with:
           fetch-depth: 0
       - name: Megalinter
-        uses: megalinter/megalinter/flavors/ci_light@982c82d840217f38f56f0d35d50eb0845fc07822 # tag=v5
+        uses: megalinter/megalinter@v5
         env:
           APPLY_FIXES: "none"
           BASH_SHFMT_DISABLE_ERRORS: "false"
+          DISABLE_LINTERS: MARKDOWN_MARKDOWN_LINK_CHECK,SPELL_CSPELL
+          FILTER_REGEX_EXCLUDE: .*/ISSUE_TEMPLATE/.*
+          FLAVOR_SUGGESTIONS: "false"
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           JSON_PRETTIER_DISABLE_ERRORS: "false"
           LOG_LEVEL: WARN

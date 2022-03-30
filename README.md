@@ -5,7 +5,7 @@ Docker image for [CCU-Historian](https://github.com/mdzio/ccu-historian).
 ## Information
 
 | Service                                                     | Stats                                                                                                                                                                                                                                                                                                               |
-| ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|-------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [GitHub](https://github.com/jokay/docker-ccu-historian)     | ![Last commit](https://img.shields.io/github/last-commit/jokay/docker-ccu-historian.svg?style=flat-square) ![Issues](https://img.shields.io/github/issues-raw/jokay/docker-ccu-historian.svg?style=flat-square) ![PR](https://img.shields.io/github/issues-pr-raw/jokay/docker-ccu-historian.svg?style=flat-square) |
 | [Docker Hub](https://hub.docker.com/r/xjokay/ccu-historian) | ![Pulls](https://img.shields.io/docker/pulls/xjokay/ccu-historian.svg?style=flat-square) ![Stars](https://img.shields.io/docker/stars/xjokay/ccu-historian.svg?style=flat-square)                                                                                                                                   |
 
@@ -18,14 +18,14 @@ docker pull docker.io/xjokay/ccu-historian:latest
 ### Supported tags
 
 | Tag       | Description                                                                                                |
-| --------- | ---------------------------------------------------------------------------------------------------------- |
+|-----------|------------------------------------------------------------------------------------------------------------|
 | latest    | [Latest](https://github.com/jokay/docker-ccu-historian/releases/latest) release                            |
 | {release} | Specific release version, see available [releases](https://github.com/jokay/docker-ccu-historian/releases) |
 
 ### Exposed Ports
 
 | Port | Protocol | Description              |
-| ---- | -------- | ------------------------ |
+|------|----------|--------------------------|
 | 80   | TCP      | Web-GUI Port             |
 | 2098 | TCP      | Xml RPC Port             |
 | 2099 | TCP      | Bin RPC Port             |
@@ -36,7 +36,7 @@ docker pull docker.io/xjokay/ccu-historian:latest
 ### Volumes
 
 | Directory                 | Description                 |
-| ------------------------- | --------------------------- |
+|---------------------------|-----------------------------|
 | /database                 | Location of the database    |
 | /opt/ccu-historian/config | Location of the config file |
 
@@ -45,7 +45,7 @@ docker pull docker.io/xjokay/ccu-historian:latest
 These environment variables must be set for the first start:
 
 | ENV field               | Req. / Opt.  | Description                                                                                                                                                                                                              |
-| ----------------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+|-------------------------|--------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | CONFIG_CCU_TYPE         | **Required** | Type of the CCU hardware, e.g. `CCU1`, `CCU2` or `CCU3`.                                                                                                                                                                 |
 | CONFIG_CCU_IP           | **Required** | IP of the CCU.                                                                                                                                                                                                           |
 | CONFIG_HOST_IP          | **Required** | IP of the Docker host.                                                                                                                                                                                                   |
