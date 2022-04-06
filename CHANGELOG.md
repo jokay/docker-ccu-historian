@@ -1,6 +1,8 @@
 # Changelog
 
-## vNext (TBA)
+## [2.9.0](https://github.com/jokay/docker-ccu-historian/releases/tag/2.9.0) (2022-04-07)
+
+This release contains CCU-Historian [2.9.0](https://github.com/mdzio/ccu-historian/releases/tag/2.9.0).
 
 ### Features
 
