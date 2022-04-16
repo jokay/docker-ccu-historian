@@ -1,5 +1,16 @@
 # Changelog
 
+## [3.0.1](https://github.com/jokay/docker-ccu-historian/releases/tag/3.0.1) (2022-04-16)
+
+This release contains CCU-Historian [3.0.1](https://github.com/mdzio/ccu-historian/releases/tag/3.0.1).
+
+### Breaking changes
+
+A database migration for existing installations is required.
+
+Please refer to the release notes of CCU-Historian [3.0.1](https://github.com/mdzio/ccu-historian/releases/tag/3.0.1)
+on how to do an export and import via Web-UI before updating.
+
 ## [2.9.0](https://github.com/jokay/docker-ccu-historian/releases/tag/2.9.0) (2022-04-07)
 
 This release contains CCU-Historian [2.9.0](https://github.com/mdzio/ccu-historian/releases/tag/2.9.0).

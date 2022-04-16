@@ -1,5 +1,5 @@
-ARG VERSION=2.9.0
-ARG CHECKSUM=1bacf008f3eaa1f66246aaeca17ac69a5a18e0c3818b47752cc5c32821ba5bc9c6a93f200dd7c5ddf462bee25d6912c71f9da98411754be6080952d96d325973
+ARG VERSION=3.0.1
+ARG CHECKSUM=5774453c375a13c5bf598fb81f5cfd564f9fb8f6d079bfcb16805b0192348fe81b89fc1dea138571e34a2f17c5e579c8b45c06adfb6531a04817b1851e5b5a10
 
 # https://hub.docker.com/_/alpine
 FROM docker.io/alpine:3.15.4@sha256:4edbd2beb5f78b1014028f4fbb99f3237d9561100b6881aabbf5acce2c4f9454 AS build
@@ -17,7 +17,7 @@ RUN printf "%s  ccu-historian-%s-bin.zip" "${CHECKSUM}" "${VERSION}" | sha512sum
     unzip "ccu-historian-${VERSION}-bin.zip" -d /tmp/ccu-historian
 
 # https://hub.docker.com/_/eclipse-temurin
-FROM docker.io/eclipse-temurin:11.0.14.1_1-jre-focal@sha256:7a3df48c8fb90a7f22910e9c2a6b9f6d0477f4ebb8d83a4f4dab883baf34d268
+FROM docker.io/eclipse-temurin:17.0.2_8-jre-focal@sha256:969b61cd870b616c2bb1b9000906e320cc7caf76293954f78b3cc1a57c66e326
 
 ARG VERSION
 
