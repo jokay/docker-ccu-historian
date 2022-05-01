@@ -16,9 +16,9 @@
       "automerge": true
     },
     {
-      "matchPackageNames": ["adoptopenjdk"],
+      "matchPackageNames": ["eclipse-temurin"],
       "versioning": "loose",
-      "allowedVersions": "/^\\d+\\.\\d+\\.\\d+_\\d+-jre-hotspot$/"
+      "allowedVersions": "/^\\d+\\.\\d+\\.\\d+_\\d+-jre-focal$/"
     }
   ]
 }
