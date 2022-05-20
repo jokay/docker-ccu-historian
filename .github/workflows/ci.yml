@@ -39,7 +39,7 @@ jobs:
           YAML_PRETTIER_DISABLE_ERRORS: "false"
       - name: Artifacts
         if: ${{ success() }} || ${{ failure() }}
-        uses: actions/upload-artifact@v3.0.0
+        uses: actions/upload-artifact@3cea5372237819ed00197afe530f5a7ea3e805c8 # tag=v3.1.0
         with:
           name: artifacts
           path: |
