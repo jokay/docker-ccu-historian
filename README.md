@@ -80,6 +80,7 @@ services:
       - 80:80
       - 2098:2098
       - 2099:2099
+      - 8082:8082
     environment:
       - TZ=Europe/Zurich
       - CONFIG_CCU_TYPE=CCU3
@@ -102,6 +103,7 @@ docker run -d \
   -p 80:80 \
   -p 2098:2098 \
   -p 2099:2099 \
+  -p 8082:8082 \
   -e TZ=Europe/Zurich \
   -e CONFIG_CCU_TYPE=CCU3 \
   -e CONFIG_CCU_IP=192.168.1.10  \
