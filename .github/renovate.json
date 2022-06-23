@@ -17,7 +17,7 @@
       "automerge": true
     },
     {
-      "matchPackageNames": ["eclipse-temurin"],
+      "matchPackageNames": ["docker.io/eclipse-temurin"],
       "versioning": "loose",
       "allowedVersions": "/^\\d+\\.\\d+\\.\\d+_\\d+-jre-focal$/"
     }
