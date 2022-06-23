@@ -17,7 +17,7 @@ RUN printf "%s  ccu-historian-%s-bin.zip" "${CHECKSUM}" "${VERSION}" | sha512sum
     unzip "ccu-historian-${VERSION}-bin.zip" -d /tmp/ccu-historian
 
 # https://hub.docker.com/_/eclipse-temurin
-FROM docker.io/eclipse-temurin:17.0.3_7-jre-focal@sha256:4ca578c1685435b134d228c3631fb94bb3d94567f9bcc4bc2b04f2afcdeabdcf
+FROM docker.io/eclipse-temurin:18.0.1_10-jre-focal@sha256:7f60aaa43c68395f40b4451e306001cc8869b1e4c97692c87614dd6e37434037
 
 ARG VERSION
 
