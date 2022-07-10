@@ -20,7 +20,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Megalinter
-        uses: megalinter/megalinter@7acb133f69d5fa8e457cd9f56b9edc38ff6a3563 # tag=v5.16.1
+        uses: megalinter/megalinter@7b2c5402f3cd7d4e9454c9d60d3c7b738bcdd039 # tag=v5.17.0
         env:
           APPLY_FIXES: "none"
           BASH_SHFMT_DISABLE_ERRORS: "false"
