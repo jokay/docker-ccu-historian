@@ -20,11 +20,11 @@ jobs:
         with:
           fetch-depth: 0
       - name: Megalinter
-        uses: megalinter/megalinter@7b2c5402f3cd7d4e9454c9d60d3c7b738bcdd039 # tag=v5.17.0
+        uses: oxsecurity/megalinter@v6.3.0
         env:
           APPLY_FIXES: "none"
           BASH_SHFMT_DISABLE_ERRORS: "false"
-          DISABLE_LINTERS: MARKDOWN_MARKDOWN_LINK_CHECK,SPELL_CSPELL
+          DISABLE_LINTERS: MARKDOWN_MARKDOWN_LINK_CHECK,REPOSITORY_CHECKOV,REPOSITORY_TRIVY,SPELL_CSPELL
           FILTER_REGEX_EXCLUDE: .*/ISSUE_TEMPLATE/.*
           FLAVOR_SUGGESTIONS: "false"
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
