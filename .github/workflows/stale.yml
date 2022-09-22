@@ -1,4 +1,4 @@
-name: Close inactive issues
+name: stale
 
 on:
   schedule:
