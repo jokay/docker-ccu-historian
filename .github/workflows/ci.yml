@@ -20,7 +20,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Megalinter
-        uses: oxsecurity/megalinter@bd931465299fd65a0fb91d8ab8ef04419e3b198e # tag=v6.10.0
+        uses: oxsecurity/megalinter@67c177017bab4c22f1bb7b06dad6f6f14df18b88 # tag=v6.11.0
         env:
           APPLY_FIXES: "none"
           BASH_SHFMT_DISABLE_ERRORS: "false"
