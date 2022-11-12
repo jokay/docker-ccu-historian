@@ -2,7 +2,7 @@ ARG VERSION=3.3.0
 ARG CHECKSUM=54aa35a23497c55a283debd0155649749bec2350142731ca92d17b4f6686460a2ba44ed719b96852866fbff8a4f9fb410ab2fc2f1bda3b7516aef6c54c8fa6ad
 
 # https://hub.docker.com/_/alpine
-FROM docker.io/alpine:3.16.2@sha256:65a2763f593ae85fab3b5406dc9e80f744ec5b449f269b699b5efd37a07ad32e AS build
+FROM docker.io/alpine:3.16.3@sha256:b95359c2505145f16c6aa384f9cc74eeff78eb36d308ca4fd902eeeb0a0b161b AS build
 
 ARG VERSION
 ARG CHECKSUM
