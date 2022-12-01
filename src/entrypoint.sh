@@ -16,7 +16,7 @@ add_cfg() {
 	echo "${1}" >>${FILE_CONFIG}
 }
 
-log "jokay/ccu-historian ${VERSION}"
+log "xjokay/ccu-historian ${VERSION}"
 
 if [[ ! -d "${PATH_CONFIG}" ]]; then
 	log "Creating config directory ..."
