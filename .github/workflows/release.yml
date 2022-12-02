@@ -1,10 +1,5 @@
 name: release
 
-env:
-  GITHUB_REGISTRY: "ghcr.io/jokay/ccu-historian"
-  DOCKERHUB_REGISTRY: "docker.io/xjokay/ccu-historian"
-  PLATFORMS: "linux/amd64,linux/arm/v7,linux/arm64,linux/ppc64le,linux/s390x"
-
 on:
   workflow_dispatch:
   push:
@@ -15,12 +10,20 @@ jobs:
   registries:
     runs-on: ubuntu-latest
     steps:
-      - name: Set variables
-        run: |
-          echo "CREATED=$(date -u +%Y-%m-%dT%H:%M:%S%z)" >> "${GITHUB_ENV}"
-          echo "VERSION=${GITHUB_REF#refs/tags/}" >> "${GITHUB_ENV}"
       - name: Checkout
         uses: actions/checkout@93ea575cb5d8a053eaa0ac8fa3b40d7e05a33cc8 # tag=v3.1.0
+      - name: Get Docker metadata
+        id: meta
+        uses: docker/metadata-action@57396166ad8aefe6098280995947635806a0e6ea # tag=v4.1.1
+        with:
+          images: |
+            ghcr.io/jokay/ccu-historian
+            docker.io/xjokay/ccu-historian
+          tags: |
+            type=ref,event=tag
+            type=semver,pattern={{version}}
+            type=semver,pattern={{major}}.{{minor}}
+            type=semver,pattern={{major}}
       - name: Set up QEMU
         uses: docker/setup-qemu-action@e81a89b1732b9c48d79cd809d8d81d79c4647a18 # tag=v2.1.0
       - name: Set up Docker Buildx
@@ -50,27 +53,12 @@ jobs:
         with:
           context: ./src
           file: ./src/Dockerfile
-          platforms: ${{ env.PLATFORMS }}
+          platforms: linux/amd64,linux/arm/v7,linux/arm64,linux/ppc64le,linux/s390x
           push: true
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache
-          labels: |
-            org.opencontainers.image.authors=${{ github.repository_owner }}
-            org.opencontainers.image.created=${{ env.CREATED }}
-            org.opencontainers.image.description=${{ github.event.repository.description }}
-            org.opencontainers.image.documentation=${{ github.event.repository.html_url }}
-            org.opencontainers.image.licenses=${{ github.event.repository.license.spdx_id }}
-            org.opencontainers.image.revision=${{ github.sha }}
-            org.opencontainers.image.source=${{ github.event.repository.html_url }}
-            org.opencontainers.image.title=${{ github.event.repository.name }}
-            org.opencontainers.image.url=${{ github.event.repository.html_url }}
-            org.opencontainers.image.vendor=${{ github.repository_owner }}
-            org.opencontainers.image.version=${{ env.VERSION }}
-          tags: |
-            ${{ env.GITHUB_REGISTRY }}:latest
-            ${{ env.GITHUB_REGISTRY }}:${{ env.VERSION }}
-            ${{ env.DOCKERHUB_REGISTRY }}:latest
-            ${{ env.DOCKERHUB_REGISTRY }}:${{ env.VERSION }}
+          labels: ${{ steps.meta.outputs.labels }}
+          tags: ${{ steps.meta.outputs.tags }}
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
   create:
@@ -78,10 +66,6 @@ jobs:
       - registries
     runs-on: ubuntu-latest
     steps:
-      - name: Set variables
-        run: |
-          echo "CREATED=$(date -u +%Y-%m-%dT%H:%M:%S%z)" >> "${GITHUB_ENV}"
-          echo "VERSION=${GITHUB_REF#refs/tags/}" >> "${GITHUB_ENV}"
       - name: Checkout
         uses: actions/checkout@93ea575cb5d8a053eaa0ac8fa3b40d7e05a33cc8 # tag=v3.1.0
       - name: Create release
