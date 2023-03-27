@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@24cb9080177205b6e8c946b17badbe402adc938f # v3.4.0
+        uses: actions/checkout@8f4b7f84864484a7bf31766abe9204da3cbe65b3 # v3.5.0
       - name: Get Docker metadata
         id: meta
         uses: docker/metadata-action@507c2f2dc502c992ad446e3d7a5dfbe311567a96 # v4.3.0
@@ -67,7 +67,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@24cb9080177205b6e8c946b17badbe402adc938f # v3.4.0
+        uses: actions/checkout@8f4b7f84864484a7bf31766abe9204da3cbe65b3 # v3.5.0
       - name: Create release
         uses: actions/create-release@0cb9c9b65d5d1901c1f53e5e66eaf4afd303e70e # tag=v1.1.4
         env:
