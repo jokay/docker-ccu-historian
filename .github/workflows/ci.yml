@@ -11,6 +11,8 @@ on:
       - main
       - release/*
 
+permissions: read-all
+
 jobs:
   lint:
     runs-on: ubuntu-latest
