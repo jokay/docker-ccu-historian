@@ -16,6 +16,13 @@ add_cfg() {
 	echo "${1}" >>${FILE_CONFIG}
 }
 
+handle_exit() {
+	log "Exit signal received, shutting down ..."
+	exit ${?}
+}
+
+trap 'kill ${!}; handle_exit' SIGHUP SIGINT SIGQUIT SIGTERM
+
 log "xjokay/ccu-historian ${VERSION}"
 
 if [[ ! -d "${PATH_CONFIG}" ]]; then
