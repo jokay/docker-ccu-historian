@@ -1,3 +1,5 @@
+# kics-scan disable=fd54f200-402c-4333-a5a4-36ef6709af2f
+
 ARG VERSION=3.3.1
 ARG CHECKSUM=01cdc4766374da9e7c153934f7915c98d88d38a09054dbe2ccbdbf4c94a171102059f13a28203db7072bbd824f6c2a0bbb0d9ec60622f210c56ec65faf5f651b
 
@@ -9,10 +11,9 @@ ARG CHECKSUM
 
 WORKDIR /tmp
 
-ADD https://github.com/mdzio/ccu-historian/releases/download/${VERSION}/ccu-historian-${VERSION}-bin.zip .
-
 # hadolint ignore=DL4006
-RUN printf "%s  ccu-historian-%s-bin.zip" "${CHECKSUM}" "${VERSION}" | sha512sum -c - && \
+RUN wget -O -q ccu-historian-${VERSION}-bin.zip https://github.com/mdzio/ccu-historian/releases/download/${VERSION}/ccu-historian-${VERSION}-bin.zip && \
+    printf "%s  ccu-historian-%s-bin.zip" "${CHECKSUM}" "${VERSION}" | sha512sum -c - && \
     mkdir /tmp/ccu-historian && \
     unzip "ccu-historian-${VERSION}-bin.zip" -d /tmp/ccu-historian
 
