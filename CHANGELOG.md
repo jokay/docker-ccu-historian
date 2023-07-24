@@ -1,5 +1,12 @@
 # Changelog
 
+## [TBA](https://github.com/jokay/docker-ccu-historian/releases/tag/TBA) (TBA)
+
+### Improvements
+
+- Improved stop handling. (thx to [@Vrumf0ndel](https://github.com/Vrumf0ndel))
+  ([#318])
+
 ## [3.3.1](https://github.com/jokay/docker-ccu-historian/releases/tag/3.3.1) (2023-03-24)
 
 This release contains CCU-Historian [3.3.1](https://github.com/mdzio/ccu-historian/releases/tag/3.3.1).
@@ -98,7 +105,7 @@ data. ([#10])
 ### Improvements
 
 - Exposed additional ports `8082` (Database Web-GUI Port), `9092` (Database TCP
-Port) and `5435` (Database PostgreSQL Port). ([#13])
+  Port) and `5435` (Database PostgreSQL Port). ([#13])
 
 ## 2.4.0 (2020-06-11)
 
@@ -140,3 +147,4 @@ This release contained CCU-Historian [2.2.0](https://github.com/mdzio/ccu-histor
 [#29]: https://github.com/jokay/docker-ccu-historian/issues/29
 [#140]: https://github.com/jokay/docker-ccu-historian/issues/140
 [#148]: https://github.com/jokay/docker-ccu-historian/issues/148
+[#318]: https://github.com/jokay/docker-ccu-historian/issues/318
