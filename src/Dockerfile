@@ -12,7 +12,7 @@ ARG CHECKSUM
 WORKDIR /tmp
 
 # hadolint ignore=DL4006
-RUN wget -O -q ccu-historian-${VERSION}-bin.zip https://github.com/mdzio/ccu-historian/releases/download/${VERSION}/ccu-historian-${VERSION}-bin.zip && \
+RUN wget -q -O ccu-historian-${VERSION}-bin.zip https://github.com/mdzio/ccu-historian/releases/download/${VERSION}/ccu-historian-${VERSION}-bin.zip && \
     printf "%s  ccu-historian-%s-bin.zip" "${CHECKSUM}" "${VERSION}" | sha512sum -c - && \
     mkdir /tmp/ccu-historian && \
     unzip "ccu-historian-${VERSION}-bin.zip" -d /tmp/ccu-historian
