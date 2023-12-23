@@ -1,7 +1,7 @@
 # kics-scan disable=fd54f200-402c-4333-a5a4-36ef6709af2f
 
-ARG VERSION=3.4.0
-ARG CHECKSUM=2706fe726cafc4b89e7a446d120ca2780abeb9e924d91552c608ee9e5acdca7719d61f2ec03043de7553aa05cf06e1d3f46bbac26428290fb314d4fd3a6f890b
+ARG VERSION=3.5.0
+ARG CHECKSUM=8517f9c2ce11b50e4b44d1b7ae755e8e503c73a0de66e33237e3f02ec593fb7c0f4247e5b1a74980daad773c1f19b038f947ec977ff07f2be0e665d7bdf0eacc
 
 # https://hub.docker.com/_/alpine
 FROM docker.io/alpine:3.19.0@sha256:51b67269f354137895d43f3b3d810bfacd3945438e94dc5ac55fdac340352f48 AS build
@@ -12,7 +12,7 @@ ARG CHECKSUM
 WORKDIR /tmp
 
 # hadolint ignore=DL4006
-RUN wget -q -O ccu-historian-${VERSION}-bin.zip https://github.com/mdzio/ccu-historian/releases/download/${VERSION}/ccu-historian-${VERSION}-bin.zip && \
+RUN wget -q -O ccu-historian-${VERSION}-bin.zip https://github.com/mdzio/ccu-historian/releases/download/v${VERSION}/ccu-historian-${VERSION}-bin.zip && \
     printf "%s  ccu-historian-%s-bin.zip" "${CHECKSUM}" "${VERSION}" | sha512sum -c - && \
     mkdir /tmp/ccu-historian && \
     unzip "ccu-historian-${VERSION}-bin.zip" -d /tmp/ccu-historian
