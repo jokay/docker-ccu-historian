@@ -1,7 +1,7 @@
 # kics-scan disable=fd54f200-402c-4333-a5a4-36ef6709af2f
 
-ARG VERSION=3.5.0
-ARG CHECKSUM=8517f9c2ce11b50e4b44d1b7ae755e8e503c73a0de66e33237e3f02ec593fb7c0f4247e5b1a74980daad773c1f19b038f947ec977ff07f2be0e665d7bdf0eacc
+ARG VERSION=3.6.0
+ARG CHECKSUM=471edff0383cad7e056b999ade10d331e782f532b47db36ea5a04e49ee4c6e490aacb8d96c87d6e9f5a1cf06a51c0eed9b616af9d4147584107b2fb68a952d75
 
 # https://hub.docker.com/_/alpine
 FROM docker.io/alpine:3.19.1@sha256:c5b1261d6d3e43071626931fc004f70149baeba2c8ec672bd4f27761f8e1ad6b AS build
@@ -18,7 +18,7 @@ RUN wget -q -O ccu-historian-${VERSION}-bin.zip https://github.com/mdzio/ccu-his
     unzip "ccu-historian-${VERSION}-bin.zip" -d /tmp/ccu-historian
 
 # https://hub.docker.com/_/eclipse-temurin
-FROM docker.io/eclipse-temurin:19.0.2_7-jre-focal@sha256:4f646d9ba7737e089a937d7a40427f8757f366829a03937b37112e2db5264b54
+FROM docker.io/eclipse-temurin:21.0.2_13-jre-jammy@sha256:91e50eaebb5efa56779a3c1bfb569f8132792e722bd23419897f889bac532ef3
 
 ARG VERSION
 
