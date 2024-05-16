@@ -9,7 +9,7 @@
     "helpers:pinGitHubActionDigests"
   ],
   "labels": ["dependencies"],
-  "stabilityDays": 3,
+  "minimumReleaseAge": "3 days",
   "packageRules": [
     {
       "matchPaths": [".github/workflows/*.yml"],
