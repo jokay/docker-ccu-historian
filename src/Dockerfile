@@ -22,8 +22,8 @@ FROM docker.io/eclipse-temurin:17.0.12_7-jre-focal@sha256:e76ab78a6ac94695fe4f3a
 
 ARG VERSION
 
-ENV VERSION "${VERSION}"
-ENV TZ "UTC"
+ENV VERSION="${VERSION}"
+ENV TZ="UTC"
 
 WORKDIR /opt/ccu-historian
 
