@@ -18,7 +18,7 @@ RUN wget -q -O ccu-historian-${VERSION}-bin.zip https://github.com/mdzio/ccu-his
     unzip "ccu-historian-${VERSION}-bin.zip" -d /tmp/ccu-historian
 
 # https://hub.docker.com/_/eclipse-temurin
-FROM docker.io/eclipse-temurin:17.0.12_7-jre-focal@sha256:5fbb322602af38e1f578c7bbb8996b1c8fffc9e6131781a9686a73a82b4a55d5
+FROM docker.io/eclipse-temurin:17.0.12_7-jre-focal@sha256:f8670c1c9d46e152138286f5e4b3170e55bf0ed78ece84f2837f3ee6d744004b
 
 ARG VERSION
 
