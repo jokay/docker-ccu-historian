@@ -1,5 +1,9 @@
 # Changelog
 
+## [4.1.0](https://github.com/jokay/docker-ccu-historian/releases/tag/4.1.0) (2024-12-22)
+
+This release contains CCU-Historian [4.1.0](https://github.com/mdzio/ccu-historian/releases/tag/v4.1.0).
+
 ## [4.0.1](https://github.com/jokay/docker-ccu-historian/releases/tag/4.0.1) (2024-06-14)
 
 This release contains CCU-Historian [4.0.1](https://github.com/mdzio/ccu-historian/releases/tag/v4.0.1).
