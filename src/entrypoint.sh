@@ -67,7 +67,7 @@ if [[ ! -f "${FILE_CONFIG}" ]]; then
     fi
 
     add_cfg "webServer.historianAddress='${CONFIG_HOST_IP}'"
-  fi
+fi
 
 if [ -n "${CONFIG_KEEP_MONTHS}" ]; then
     REF_DATE=$(date -d "-${CONFIG_KEEP_MONTHS} month" +%Y-%m-%d)
