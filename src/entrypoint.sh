@@ -27,9 +27,9 @@ if [[ ! -f "${FILE_CONFIG}" ]]; then
     log "Creating config file ..."
 
     if [[ -z "${CONFIG_HOST_IP}" || -z "${CONFIG_CCU_TYPE}" || -z "${CONFIG_CCU_IP}" ]]; then
-      log "Required environment variables are missing!"
-      log_sub "Please specify CONFIG_HOST_IP, CONFIG_CCU_TYPE and CONFIG_CCU_IP."
-      exit 1
+        log "Required environment variables are missing!"
+        log_sub "Please specify CONFIG_HOST_IP, CONFIG_CCU_TYPE and CONFIG_CCU_IP."
+        exit 1
     fi
 
     touch "${FILE_CONFIG}"
@@ -41,29 +41,29 @@ if [[ ! -f "${FILE_CONFIG}" ]]; then
     add_cfg "devices.device1.type=${CONFIG_CCU_TYPE}"
 
     if [ -n "${CONFIG_CCU_PLUGIN1_TYPE}" ]; then
-      add_cfg "devices.device1.plugin1.type=${CONFIG_CCU_PLUGIN1_TYPE}"
+        add_cfg "devices.device1.plugin1.type=${CONFIG_CCU_PLUGIN1_TYPE}"
     fi
 
     if [ -n "${CONFIG_CCU_PLUGIN2_TYPE}" ]; then
-      add_cfg "devices.device1.plugin2.type=${CONFIG_CCU_PLUGIN2_TYPE}"
+        add_cfg "devices.device1.plugin2.type=${CONFIG_CCU_PLUGIN2_TYPE}"
     fi
 
     if [ -n "${CONFIG_CCU_USERNAME}" ]; then
-      add_cfg "devices.device1.username='${CONFIG_CCU_USERNAME}'"
+        add_cfg "devices.device1.username='${CONFIG_CCU_USERNAME}'"
     fi
 
     if [ -n "${CONFIG_CCU_PASSWORD}" ]; then
-      add_cfg "devices.device1.password='${CONFIG_CCU_PASSWORD}'"
+        add_cfg "devices.device1.password='${CONFIG_CCU_PASSWORD}'"
     fi
 
     add_cfg "devices.historianAddress='${CONFIG_HOST_IP}'"
 
     if [ -n "${CONFIG_HOST_BINRPCPORT}" ]; then
-      add_cfg "devices.historianBinRpcPort=${CONFIG_HOST_BINRPCPORT}"
+        add_cfg "devices.historianBinRpcPort=${CONFIG_HOST_BINRPCPORT}"
     fi
 
     if [ -n "${CONFIG_HOST_XMLRPCPORT}" ]; then
-      add_cfg "devices.historianXmlRpcPort=${CONFIG_HOST_XMLRPCPORT}"
+        add_cfg "devices.historianXmlRpcPort=${CONFIG_HOST_XMLRPCPORT}"
     fi
 
     add_cfg "webServer.historianAddress='${CONFIG_HOST_IP}'"
